@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA010D88196B7982004FF343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D87196B7982004FF343 /* Foundation.framework */; };
+		EA010D8A196B7982004FF343 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D89196B7982004FF343 /* CoreGraphics.framework */; };
+		EA010D8C196B7982004FF343 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D8B196B7982004FF343 /* UIKit.framework */; };
+		EA010D92196B7982004FF343 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA010D90196B7982004FF343 /* InfoPlist.strings */; };
+		EA010D94196B7982004FF343 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA010D93196B7982004FF343 /* main.m */; };
+		EA010D98196B7982004FF343 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA010D97196B7982004FF343 /* AppDelegate.m */; };
+		EA010D9A196B7982004FF343 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA010D99196B7982004FF343 /* Images.xcassets */; };
+		EA010DA1196B7982004FF343 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010DA0196B7982004FF343 /* XCTest.framework */; };
+		EA010DA2196B7982004FF343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D87196B7982004FF343 /* Foundation.framework */; };
+		EA010DA3196B7982004FF343 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D8B196B7982004FF343 /* UIKit.framework */; };
+		EA010DAB196B7982004FF343 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA010DA9196B7982004FF343 /* InfoPlist.strings */; };
+		EA010DAD196B7982004FF343 /* RestaurantOrganizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA010DAC196B7982004FF343 /* RestaurantOrganizerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA010DA4196B7982004FF343 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA010D7C196B7982004FF343 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA010D83196B7982004FF343;
+			remoteInfo = RestaurantOrganizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA010D84196B7982004FF343 /* RestaurantOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA010D87196B7982004FF343 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA010D89196B7982004FF343 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA010D8B196B7982004FF343 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA010D8F196B7982004FF343 /* RestaurantOrganizer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestaurantOrganizer-Info.plist"; sourceTree = "<group>"; };
+		EA010D91196B7982004FF343 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA010D93196B7982004FF343 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA010D95196B7982004FF343 /* RestaurantOrganizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RestaurantOrganizer-Prefix.pch"; sourceTree = "<group>"; };
+		EA010D96196B7982004FF343 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA010D97196B7982004FF343 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA010D99196B7982004FF343 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA010D9F196B7982004FF343 /* RestaurantOrganizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantOrganizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA010DA0196B7982004FF343 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EA010DA8196B7982004FF343 /* RestaurantOrganizerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestaurantOrganizerTests-Info.plist"; sourceTree = "<group>"; };
+		EA010DAA196B7982004FF343 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA010DAC196B7982004FF343 /* RestaurantOrganizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantOrganizerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA010D81196B7982004FF343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA010D8A196B7982004FF343 /* CoreGraphics.framework in Frameworks */,
+				EA010D8C196B7982004FF343 /* UIKit.framework in Frameworks */,
+				EA010D88196B7982004FF343 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA010D9C196B7982004FF343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA010DA1196B7982004FF343 /* XCTest.framework in Frameworks */,
+				EA010DA3196B7982004FF343 /* UIKit.framework in Frameworks */,
+				EA010DA2196B7982004FF343 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA010D7B196B7982004FF343 = {
+			isa = PBXGroup;
+			children = (
+				EA010D8D196B7982004FF343 /* RestaurantOrganizer */,
+				EA010DA6196B7982004FF343 /* RestaurantOrganizerTests */,
+				EA010D86196B7982004FF343 /* Frameworks */,
+				EA010D85196B7982004FF343 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA010D85196B7982004FF343 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA010D84196B7982004FF343 /* RestaurantOrganizer.app */,
+				EA010D9F196B7982004FF343 /* RestaurantOrganizerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA010D86196B7982004FF343 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA010D87196B7982004FF343 /* Foundation.framework */,
+				EA010D89196B7982004FF343 /* CoreGraphics.framework */,
+				EA010D8B196B7982004FF343 /* UIKit.framework */,
+				EA010DA0196B7982004FF343 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA010D8D196B7982004FF343 /* RestaurantOrganizer */ = {
+			isa = PBXGroup;
+			children = (
+				EA010D96196B7982004FF343 /* AppDelegate.h */,
+				EA010D97196B7982004FF343 /* AppDelegate.m */,
+				EA010D99196B7982004FF343 /* Images.xcassets */,
+				EA010D8E196B7982004FF343 /* Supporting Files */,
+			);
+			path = RestaurantOrganizer;
+			sourceTree = "<group>";
+		};
+		EA010D8E196B7982004FF343 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA010D8F196B7982004FF343 /* RestaurantOrganizer-Info.plist */,
+				EA010D90196B7982004FF343 /* InfoPlist.strings */,
+				EA010D93196B7982004FF343 /* main.m */,
+				EA010D95196B7982004FF343 /* RestaurantOrganizer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA010DA6196B7982004FF343 /* RestaurantOrganizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA010DAC196B7982004FF343 /* RestaurantOrganizerTests.m */,
+				EA010DA7196B7982004FF343 /* Supporting Files */,
+			);
+			path = RestaurantOrganizerTests;
+			sourceTree = "<group>";
+		};
+		EA010DA7196B7982004FF343 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA010DA8196B7982004FF343 /* RestaurantOrganizerTests-Info.plist */,
+				EA010DA9196B7982004FF343 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA010D83196B7982004FF343 /* RestaurantOrganizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA010DB0196B7982004FF343 /* Build configuration list for PBXNativeTarget "RestaurantOrganizer" */;
+			buildPhases = (
+				EA010D80196B7982004FF343 /* Sources */,
+				EA010D81196B7982004FF343 /* Frameworks */,
+				EA010D82196B7982004FF343 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RestaurantOrganizer;
+			productName = RestaurantOrganizer;
+			productReference = EA010D84196B7982004FF343 /* RestaurantOrganizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA010D9E196B7982004FF343 /* RestaurantOrganizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA010DB3196B7982004FF343 /* Build configuration list for PBXNativeTarget "RestaurantOrganizerTests" */;
+			buildPhases = (
+				EA010D9B196B7982004FF343 /* Sources */,
+				EA010D9C196B7982004FF343 /* Frameworks */,
+				EA010D9D196B7982004FF343 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA010DA5196B7982004FF343 /* PBXTargetDependency */,
+			);
+			name = RestaurantOrganizerTests;
+			productName = RestaurantOrganizerTests;
+			productReference = EA010D9F196B7982004FF343 /* RestaurantOrganizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA010D7C196B7982004FF343 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___rpinsker___";
+				TargetAttributes = {
+					EA010D9E196B7982004FF343 = {
+						TestTargetID = EA010D83196B7982004FF343;
+					};
+				};
+			};
+			buildConfigurationList = EA010D7F196B7982004FF343 /* Build configuration list for PBXProject "RestaurantOrganizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA010D7B196B7982004FF343;
+			productRefGroup = EA010D85196B7982004FF343 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA010D83196B7982004FF343 /* RestaurantOrganizer */,
+				EA010D9E196B7982004FF343 /* RestaurantOrganizerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA010D82196B7982004FF343 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA010D92196B7982004FF343 /* InfoPlist.strings in Resources */,
+				EA010D9A196B7982004FF343 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA010D9D196B7982004FF343 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA010DAB196B7982004FF343 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA010D80196B7982004FF343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA010D98196B7982004FF343 /* AppDelegate.m in Sources */,
+				EA010D94196B7982004FF343 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA010D9B196B7982004FF343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA010DAD196B7982004FF343 /* RestaurantOrganizerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA010DA5196B7982004FF343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA010D83196B7982004FF343 /* RestaurantOrganizer */;
+			targetProxy = EA010DA4196B7982004FF343 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA010D90196B7982004FF343 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA010D91196B7982004FF343 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA010DA9196B7982004FF343 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA010DAA196B7982004FF343 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA010DAE196B7982004FF343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA010DAF196B7982004FF343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA010DB1196B7982004FF343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RestaurantOrganizer/RestaurantOrganizer-Prefix.pch";
+				INFOPLIST_FILE = "RestaurantOrganizer/RestaurantOrganizer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA010DB2196B7982004FF343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RestaurantOrganizer/RestaurantOrganizer-Prefix.pch";
+				INFOPLIST_FILE = "RestaurantOrganizer/RestaurantOrganizer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EA010DB4196B7982004FF343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RestaurantOrganizer.app/RestaurantOrganizer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RestaurantOrganizer/RestaurantOrganizer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RestaurantOrganizerTests/RestaurantOrganizerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EA010DB5196B7982004FF343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RestaurantOrganizer.app/RestaurantOrganizer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RestaurantOrganizer/RestaurantOrganizer-Prefix.pch";
+				INFOPLIST_FILE = "RestaurantOrganizerTests/RestaurantOrganizerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA010D7F196B7982004FF343 /* Build configuration list for PBXProject "RestaurantOrganizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA010DAE196B7982004FF343 /* Debug */,
+				EA010DAF196B7982004FF343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA010DB0196B7982004FF343 /* Build configuration list for PBXNativeTarget "RestaurantOrganizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA010DB1196B7982004FF343 /* Debug */,
+				EA010DB2196B7982004FF343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA010DB3196B7982004FF343 /* Build configuration list for PBXNativeTarget "RestaurantOrganizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA010DB4196B7982004FF343 /* Debug */,
+				EA010DB5196B7982004FF343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA010D7C196B7982004FF343 /* Project object */;
+}
