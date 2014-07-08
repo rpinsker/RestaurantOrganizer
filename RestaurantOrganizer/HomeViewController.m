@@ -47,8 +47,10 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"FromHomeToRestaurantList"]) {
+        UINavigationController *nc = (UINavigationController *)segue.destinationViewController;
+        
         RestaurantListViewController *listViewController =
-        (RestaurantListViewController *)segue.destinationViewController;
+        (RestaurantListViewController *)[nc topViewController];
         
         NSArray *folders= [[FolderStore sharedStore] allFolders];
         NSIndexPath *ip = [self.tableView indexPathForCell:sender];

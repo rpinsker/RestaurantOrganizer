@@ -26,10 +26,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if ([self.folder.restaurantsInFolder count] != 0) {
-        NSLog(@"%@", [[self.folder.restaurantsInFolder objectAtIndex:0] name]);
-
-    }
+   
     [self.tableView reloadData];
 }
 
@@ -76,12 +73,25 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+//    if (segue.identifier isEqualToString:@"AddNewItem") {
+//        NewMenuItemViewController *newItem =
+//    }
     if ([segue.identifier isEqualToString:@"AddNewRestaurant"]) {
         UINavigationController *nc = (UINavigationController *)segue.destinationViewController;
         
         NewRestaurantViewController *newRest = (NewRestaurantViewController *)[nc topViewController];
         newRest.currentFolder = self.folder;
     }
+    
+    else if ([segue.identifier isEqualToString:@"restListToMenu"]) {
+        UINavigationController *nc = (UINavigationController *)segue.destinationViewController;
+        
+        NewMenuItemViewController *newItem = (NewMenuItemViewController *)[nc topViewController];
+        NSIndexPath *ip = [self.tableView indexPathForCell:sender];
+
+        newItem.restaurant = self.folder.restaurantsInFolder[ip.row];
+    }
+
 }
 
 
