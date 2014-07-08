@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93E0EE74196C4C73007362F2 /* RestaurantOrganizer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */; };
 		EA010D88196B7982004FF343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D87196B7982004FF343 /* Foundation.framework */; };
 		EA010D8A196B7982004FF343 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D89196B7982004FF343 /* CoreGraphics.framework */; };
 		EA010D8C196B7982004FF343 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D8B196B7982004FF343 /* UIKit.framework */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RestaurantOrganizer.storyboard; sourceTree = "<group>"; };
 		EA010D84196B7982004FF343 /* RestaurantOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA010D87196B7982004FF343 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA010D89196B7982004FF343 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,6 +79,7 @@
 		EA010D7B196B7982004FF343 = {
 			isa = PBXGroup;
 			children = (
+				93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */,
 				EA010D8D196B7982004FF343 /* RestaurantOrganizer */,
 				EA010DA6196B7982004FF343 /* RestaurantOrganizerTests */,
 				EA010D86196B7982004FF343 /* Frameworks */,
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA010D92196B7982004FF343 /* InfoPlist.strings in Resources */,
+				93E0EE74196C4C73007362F2 /* RestaurantOrganizer.storyboard in Resources */,
 				EA010D9A196B7982004FF343 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +441,7 @@
 				EA010DB2196B7982004FF343 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA010DB3196B7982004FF343 /* Build configuration list for PBXNativeTarget "RestaurantOrganizerTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +450,7 @@
 				EA010DB5196B7982004FF343 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
