@@ -102,13 +102,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cWi-hG-HUj">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UITableViewCell" id="cWi-hG-HUj">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cWi-hG-HUj" id="T4m-vx-vy7">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="XyJ-qi-ITx" kind="push" id="3Mg-y8-UOX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -119,8 +122,7 @@
                     <navigationItem key="navigationItem" title="Foo" id="snv-wt-vfq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7f3-9W-74b">
                             <connections>
-                                <action selector="addRestaurantPressed:" destination="fIr-JK-T3B" id="o1C-OG-x7H"/>
-                                <segue destination="IJ9-vF-V5E" kind="push" id="j3K-jU-SSG"/>
+                                <segue destination="WeV-PP-htj" kind="modal" identifier="AddNewRestaurant" id="xd7-JC-7MR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -188,7 +190,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Bq9-tI-0s4"/>
+                    <navigationItem key="navigationItem" id="Bq9-tI-0s4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="0iS-Uk-OPm"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="commentLabel" destination="rkY-tR-Wvh" id="Qi3-gT-f6k"/>
                         <outlet property="dateLabel" destination="kQV-Mm-tah" id="4XW-TP-pfo"/>
@@ -196,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZh-HC-kYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1413" y="1500"/>
+            <point key="canvasLocation" x="1846" y="1477"/>
         </scene>
         <!--Folder View Controller-->
         <scene sceneID="Hsn-rx-L1y">
@@ -262,6 +266,21 @@
             </objects>
             <point key="canvasLocation" x="815" y="-59"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="21R-Ag-47b">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="WeV-PP-htj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wXH-h7-4MS">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IJ9-vF-V5E" kind="relationship" relationship="rootViewController" id="8up-Gq-Yux"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7M-fN-pSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="691"/>
+        </scene>
         <!--New Restaurant View Controller - Create New Restaurant-->
         <scene sceneID="hvq-fa-Z6k">
             <objects>
@@ -292,24 +311,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add text here..." translatesAutoresizingMaskIntoConstraints="NO" id="1jv-0C-Yd8">
-                                <rect key="frame" x="32" y="186" width="240" height="128"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="insert comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCt-wE-NoT">
+                                <rect key="frame" x="20" y="186" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create New Restaurant" id="5tg-vR-Np1">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GR3-ED-9cu"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="lnk-R3-Gb7"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GR3-ED-9cu">
+                            <connections>
+                                <action selector="cancelPressed:" destination="IJ9-vF-V5E" id="y6M-nN-0z4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="lnk-R3-Gb7">
+                            <connections>
+                                <action selector="donePressed:" destination="IJ9-vF-V5E" id="vu2-hP-5Kq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="commentField" destination="QCt-wE-NoT" id="Avf-s5-JQq"/>
+                        <outlet property="nameField" destination="EBh-Ro-mey" id="Qsf-5m-lJM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haM-AJ-GwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368" y="652"/>
+            <point key="canvasLocation" x="2046" y="691"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

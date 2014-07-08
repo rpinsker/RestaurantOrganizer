@@ -10,6 +10,7 @@
 #import "FolderObject.h"
 #import "RestaurantObject.h"
 #import "NewMenuItemViewController.h"
+#import "NewRestaurantViewController.h"
 
 @interface RestaurantListViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -20,21 +21,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"UITableViewCell"];
     self.title = [self.folder name];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if ([self.folder.restaurantsInFolder count] != 0) {
+        NSLog(@"%@", [[self.folder.restaurantsInFolder objectAtIndex:0] name]);
 
+    }
+    [self.tableView reloadData];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
     return [self.folder.restaurantsInFolder count];
 }
-- (IBAction)addRestaurantPressed:(id)sender {
-    NSLog(@"da fuq");
-}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,24 +60,29 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NewMenuItemViewController *menuItemController =
-    [[NewMenuItemViewController alloc] init];
-    
-    NSArray *restaurants = [self.folder restaurantsInFolder];
-    RestaurantObject *restaurant = restaurants[indexPath.row];
-    menuItemController.restaurant = restaurant;
-    
-    // Push it onto the top of the navigation controller's stack
-    [self.navigationController pushViewController:menuItemController animated:NO];
-}
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//- (void)tableView:(UITableView *)tableView
+//didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//    NSLog(@"helloo");
+//    NewMenuItemViewController *menuItemController =
+//    [[NewMenuItemViewController alloc] init];
+//    
+//    NSArray *restaurants = [self.folder restaurantsInFolder];
+//    RestaurantObject *restaurant = restaurants[indexPath.row];
+//    menuItemController.restaurant = restaurant;
+//    
+//    // Push it onto the top of the navigation controller's stack
+//    [self.navigationController pushViewController:menuItemController animated:NO];
 //}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"AddNewRestaurant"]) {
+        UINavigationController *nc = (UINavigationController *)segue.destinationViewController;
+        
+        NewRestaurantViewController *newRest = (NewRestaurantViewController *)[nc topViewController];
+        newRest.currentFolder = self.folder;
+    }
+}
 
 
 @end

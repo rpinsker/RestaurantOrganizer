@@ -18,6 +18,17 @@
 
 @implementation RestaurantObject
 
+-(instancetype)initWithName: (NSString *)name andDescription: (NSString *)description
+{
+    self = [super init];
+    if (self)
+    {
+        _privateName = [name mutableCopy];
+        _privateDescription = [description mutableCopy];
+    }
+    return self;
+}
+
 - (NSString *) name
 {
     return [self.privateName copy];

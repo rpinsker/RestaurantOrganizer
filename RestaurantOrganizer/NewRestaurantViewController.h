@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@class FolderObject;
 
 @interface NewRestaurantViewController : UIViewController
+
+@property (nonatomic) FolderObject *currentFolder; 
+
 
 @end

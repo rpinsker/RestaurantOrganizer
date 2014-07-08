@@ -35,9 +35,9 @@
     return [self.privateRestaurants copy];
 }
 
-- (void) addRestaurant
+- (void) addRestaurant: (RestaurantObject *)newR
 {
-    
+    [self.privateRestaurants addObject:newR];
 }
 
 @end

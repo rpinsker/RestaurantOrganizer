@@ -10,6 +10,9 @@
 
 @interface RestaurantObject : NSObject
 
+-(instancetype)initWithName: (NSString *)name andDescription: (NSString *)description;
+
+
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly, copy) NSString *description;
 @property (nonatomic, readonly) NSDate *lastVisted;

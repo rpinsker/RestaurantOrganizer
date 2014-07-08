@@ -15,6 +15,7 @@
 @property (nonatomic, readonly, copy) NSArray *restaurantsInFolder;
 
 - (instancetype) initWithName:(NSString *) name;
+- (void) addRestaurant: (RestaurantObject *)newR;
 
 
 @end

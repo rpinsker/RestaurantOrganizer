@@ -31,8 +31,6 @@
     NSString *name = _folderName.text;
     [[FolderStore sharedStore] createFolderWithName:name];
     
-    
-    
     [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
     
 }
