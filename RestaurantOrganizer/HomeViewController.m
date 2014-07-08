@@ -10,6 +10,7 @@
 #import "FolderViewController.h"
 #import "FolderObject.h"
 #import "FolderStore.h"
+#import "RestaurantListViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -32,13 +33,31 @@
     UITableViewCell *cell =
     [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
                                     forIndexPath:indexPath];
+    
     // Set the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
     // will appear in on the tableview
     NSArray *folders = [[FolderStore sharedStore] allFolders];
     FolderObject *folder = folders[indexPath.row];
     cell.textLabel.text = [folder name];
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    RestaurantListViewController *listViewController =
+    [[RestaurantListViewController alloc] init];
+    
+    NSArray *folders= [[FolderStore sharedStore] allFolders];
+    FolderObject *folder = folders[indexPath.row];
+    listViewController.folder = folder;
+    
+    // Push it onto the top of the navigation controller's stack
+    [self.navigationController pushViewController:listViewController animated:NO];
+    
+    
 }
 
 - (void)viewDidLoad

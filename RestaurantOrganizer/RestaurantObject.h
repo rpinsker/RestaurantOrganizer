@@ -10,4 +10,8 @@
 
 @interface RestaurantObject : NSObject
 
+@property (nonatomic, readonly, copy) NSString *name;
+@property (nonatomic, readonly, copy) NSString *description;
+@property (nonatomic, readonly) NSDate *lastVisted;
+
 @end

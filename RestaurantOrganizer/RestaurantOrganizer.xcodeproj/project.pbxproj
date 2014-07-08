@@ -12,6 +12,9 @@
 		93A86C38196C5A530054D773 /* FolderStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C37196C5A530054D773 /* FolderStore.m */; };
 		93A86C3B196C5A5C0054D773 /* FolderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C3A196C5A5C0054D773 /* FolderObject.m */; };
 		93A86C3E196C5A640054D773 /* RestaurantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C3D196C5A640054D773 /* RestaurantObject.m */; };
+		93A86C41196C65E20054D773 /* RestaurantListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C40196C65E20054D773 /* RestaurantListViewController.m */; };
+		93A86C44196C71060054D773 /* NewRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C43196C71060054D773 /* NewRestaurantViewController.m */; };
+		93A86C47196C71150054D773 /* NewMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C46196C71150054D773 /* NewMenuItemViewController.m */; };
 		93E0EE74196C4C73007362F2 /* RestaurantOrganizer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */; };
 		EA010D88196B7982004FF343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D87196B7982004FF343 /* Foundation.framework */; };
 		EA010D8A196B7982004FF343 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D89196B7982004FF343 /* CoreGraphics.framework */; };
@@ -48,6 +51,12 @@
 		93A86C3A196C5A5C0054D773 /* FolderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderObject.m; sourceTree = "<group>"; };
 		93A86C3C196C5A640054D773 /* RestaurantObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantObject.h; sourceTree = "<group>"; };
 		93A86C3D196C5A640054D773 /* RestaurantObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantObject.m; sourceTree = "<group>"; };
+		93A86C3F196C65E20054D773 /* RestaurantListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantListViewController.h; sourceTree = "<group>"; };
+		93A86C40196C65E20054D773 /* RestaurantListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantListViewController.m; sourceTree = "<group>"; };
+		93A86C42196C71060054D773 /* NewRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRestaurantViewController.h; sourceTree = "<group>"; };
+		93A86C43196C71060054D773 /* NewRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRestaurantViewController.m; sourceTree = "<group>"; };
+		93A86C45196C71150054D773 /* NewMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMenuItemViewController.h; sourceTree = "<group>"; };
+		93A86C46196C71150054D773 /* NewMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMenuItemViewController.m; sourceTree = "<group>"; };
 		93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RestaurantOrganizer.storyboard; sourceTree = "<group>"; };
 		EA010D84196B7982004FF343 /* RestaurantOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA010D87196B7982004FF343 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */,
+				93A86C42196C71060054D773 /* NewRestaurantViewController.h */,
+				93A86C43196C71060054D773 /* NewRestaurantViewController.m */,
+				93A86C45196C71150054D773 /* NewMenuItemViewController.h */,
+				93A86C46196C71150054D773 /* NewMenuItemViewController.m */,
 				93A86C36196C5A530054D773 /* FolderStore.h */,
 				93A86C37196C5A530054D773 /* FolderStore.m */,
 				93A86C39196C5A5C0054D773 /* FolderObject.h */,
@@ -103,6 +116,8 @@
 				93A86C3D196C5A640054D773 /* RestaurantObject.m */,
 				93A86C33196C56420054D773 /* HomeViewController.h */,
 				93A86C34196C56420054D773 /* HomeViewController.m */,
+				93A86C3F196C65E20054D773 /* RestaurantListViewController.h */,
+				93A86C40196C65E20054D773 /* RestaurantListViewController.m */,
 				93A86C30196C549C0054D773 /* FolderViewController.h */,
 				93A86C31196C549C0054D773 /* FolderViewController.m */,
 				EA010D8D196B7982004FF343 /* RestaurantOrganizer */,
@@ -271,8 +286,11 @@
 				93A86C32196C549C0054D773 /* FolderViewController.m in Sources */,
 				EA010D98196B7982004FF343 /* AppDelegate.m in Sources */,
 				93A86C3B196C5A5C0054D773 /* FolderObject.m in Sources */,
+				93A86C44196C71060054D773 /* NewRestaurantViewController.m in Sources */,
 				93A86C38196C5A530054D773 /* FolderStore.m in Sources */,
+				93A86C47196C71150054D773 /* NewMenuItemViewController.m in Sources */,
 				93A86C3E196C5A640054D773 /* RestaurantObject.m in Sources */,
+				93A86C41196C65E20054D773 /* RestaurantListViewController.m in Sources */,
 				EA010D94196B7982004FF343 /* main.m in Sources */,
 				93A86C35196C56420054D773 /* HomeViewController.m in Sources */,
 			);
