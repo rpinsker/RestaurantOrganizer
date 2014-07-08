@@ -44,27 +44,23 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    RestaurantListViewController *listViewController =
-    [[RestaurantListViewController alloc] init];
-    
-    NSArray *folders= [[FolderStore sharedStore] allFolders];
-    FolderObject *folder = folders[indexPath.row];
-    listViewController.folder = folder;
-    
-    // Push it onto the top of the navigation controller's stack
-    [self.navigationController pushViewController:listViewController animated:NO];
-    
-    
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"FromHomeToRestaurantList"]) {
+        RestaurantListViewController *listViewController =
+        (RestaurantListViewController *)segue.destinationViewController;
+        
+        NSArray *folders= [[FolderStore sharedStore] allFolders];
+        NSIndexPath *ip = [self.tableView indexPathForCell:sender];
+        FolderObject *folder = folders[ip.row];
+        listViewController.folder = folder;
+    }
 }
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated

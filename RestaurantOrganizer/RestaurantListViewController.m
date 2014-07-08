@@ -23,13 +23,17 @@
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
     self.title = [self.folder name];
-
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
     return [self.folder.restaurantsInFolder count];
+}
+- (IBAction)addRestaurantPressed:(id)sender {
+    NSLog(@"da fuq");
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -65,5 +69,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     // Push it onto the top of the navigation controller's stack
     [self.navigationController pushViewController:menuItemController animated:NO];
 }
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    NSLog(@"helloo");
+//}
+
 
 @end

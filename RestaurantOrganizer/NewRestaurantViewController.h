@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NewRestaurantViewController : NSObject
+@interface NewRestaurantViewController : UIViewController
 
 @end

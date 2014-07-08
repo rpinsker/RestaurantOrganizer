@@ -9,6 +9,13 @@
 #import "NewMenuItemViewController.h"
 #import "RestaurantObject.h"
 
+@interface NewMenuItemViewController()
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+
+
+@end
+
 @implementation NewMenuItemViewController
 
 -(void) viewDidLoad
@@ -16,4 +23,6 @@
     [super viewDidLoad];
     self.title = [self.restaurant name];
 }
+
+
 @end

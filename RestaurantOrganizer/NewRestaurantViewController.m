@@ -8,6 +8,13 @@
 
 #import "NewRestaurantViewController.h"
 
+@interface NewRestaurantViewController()
+
+
+@end
+
 @implementation NewRestaurantViewController
+
+
 
 @end
