@@ -9,11 +9,14 @@
 #import "NewMenuItemViewController.h"
 #import "RestaurantListViewController.h"
 #import "RestaurantObject.h"
+#import "MenuItemDetailViewController.h"
 
-@interface NewMenuItemViewController()
+@interface NewMenuItemViewController() <UICollectionViewDataSource, UICollectionViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastVisited;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 
 @end
@@ -31,6 +34,13 @@
     self.lastVisited.text = [@"Last Visited: " stringByAppendingString:[dateFormatter stringFromDate:date]];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.collectionView reloadData];
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"menuToRestList"]) {
         UINavigationController *nc = (UINavigationController *)segue.destinationViewController;
@@ -40,5 +50,28 @@
         
         listViewController.folder = [self.restaurant myFolder];
     }
+    else if ([segue.identifier isEqualToString:@"menuToNewItem"]) {
+        UINavigationController *nc = (UINavigationController *)segue.destinationViewController;
+        
+        MenuItemDetailViewController *detailView =
+        (MenuItemDetailViewController *)[nc topViewController];
+        
+        detailView.restaurant = self.restaurant;
+    }
+
 }
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:self.restaurant.menuItems[indexPath.row]];
+    cell.backgroundView = imageView;
+    
+    return cell;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.restaurant.menuItems count];
+}
+
 @end

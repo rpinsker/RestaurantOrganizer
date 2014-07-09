@@ -18,7 +18,15 @@
 
 @implementation MenuItemObject
 
-
+-(instancetype)initWithName: (NSString *)name andDescription: (NSString *)description andImage: (UIImage *)image {
+    self = [super init];
+    if (self) {
+        _privateItemName = [name mutableCopy];
+        _privateItemDescription = [description mutableCopy];
+        _itemImage = image;
+    }
+    return self;
+}
 
 -(NSString *)itemName {
     return [self.privateItemName copy];

@@ -164,7 +164,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCR-NG-Okb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="1227"/>
+            <point key="canvasLocation" x="572" y="1163"/>
         </scene>
         <!--New Menu Item View Controller-->
         <scene sceneID="ZQ7-nj-P7t">
@@ -191,7 +191,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cHQ-bE-EaL">
-                                <rect key="frame" x="0.0" y="218" width="332" height="350"/>
+                                <rect key="frame" x="0.0" y="208" width="332" height="350"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nue-Ru-EbI">
                                     <size key="itemSize" width="157" height="127"/>
@@ -200,7 +200,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0mW-k7-aXm">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="0mW-k7-aXm">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -221,6 +221,10 @@
                                         <size key="customSize" width="160" height="160"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="XyJ-qi-ITx" id="gAi-WG-4O4"/>
+                                    <outlet property="delegate" destination="XyJ-qi-ITx" id="4Ko-fa-ZmD"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKp-n0-2JV">
                                 <rect key="frame" x="76" y="172" width="152" height="30"/>
@@ -229,7 +233,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9yt-Ke-OZX" kind="modal" id="6cN-Wa-wpj"/>
+                                    <segue destination="9yt-Ke-OZX" kind="modal" identifier="menuToNewItem" id="6cN-Wa-wpj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -243,6 +247,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="cHQ-bE-EaL" id="pxe-Ro-8fA"/>
                         <outlet property="commentLabel" destination="rkY-tR-Wvh" id="Qi3-gT-f6k"/>
                         <outlet property="dateLabel" destination="kQV-Mm-tah" id="4XW-TP-pfo"/>
                         <outlet property="lastVisited" destination="kQV-Mm-tah" id="Bve-Yy-jh9"/>
@@ -250,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZh-HC-kYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="1163"/>
+            <point key="canvasLocation" x="960" y="1163"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vBg-U9-qZ7">
@@ -265,12 +270,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaw-HY-Lq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1539" y="1163"/>
+            <point key="canvasLocation" x="1531" y="1163"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu Item Detail View Controller-->
         <scene sceneID="1wM-oR-U1z">
             <objects>
-                <viewController id="lfs-i5-frA" sceneMemberID="viewController">
+                <viewController id="lfs-i5-frA" customClass="MenuItemDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DSs-Jj-oK1"/>
                         <viewControllerLayoutGuide type="bottom" id="zHa-YG-d6m"/>
@@ -278,9 +283,68 @@
                     <view key="view" contentMode="scaleToFill" id="YII-ic-AW7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dish Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OS-Vs-iaL">
+                                <rect key="frame" x="30" y="109" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dish Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqA-Oi-rJz">
+                                <rect key="frame" x="30" y="158" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dish name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k63-cc-aQ8">
+                                <rect key="frame" x="132" y="109" width="148" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter description..." translatesAutoresizingMaskIntoConstraints="NO" id="vPu-1t-W60">
+                                <rect key="frame" x="40" y="187" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75261230020000003" green="0.84825067929999998" blue="0.61746695610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eng-Jn-9jJ">
+                                <rect key="frame" x="0.0" y="518" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="tOP-HO-kiD">
+                                        <connections>
+                                            <action selector="takePicture:" destination="lfs-i5-frA" id="VHy-gV-Vk6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bt0-0h-seC">
+                                <rect key="frame" x="40" y="333" width="240" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dwe-cA-R2V"/>
+                    <navigationItem key="navigationItem" id="dwe-cA-R2V">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lvP-4X-hXf">
+                            <connections>
+                                <action selector="cancelPressed:" destination="lfs-i5-frA" id="Y1w-oa-of3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fkw-Gu-3PZ">
+                            <connections>
+                                <segue destination="gQr-Ou-aRp" kind="modal" identifier="FinishedCreatingDish" id="BRR-Pr-dt3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dishDescriptionTextView" destination="vPu-1t-W60" id="HJK-vw-bGH"/>
+                        <outlet property="dishImage" destination="Bt0-0h-seC" id="zO1-gU-d7O"/>
+                        <outlet property="dishNameTextField" destination="k63-cc-aQ8" id="ZxC-JX-OJA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3N-e0-Dbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -434,6 +498,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="3ns-69-9Ka"/>
-        <segue reference="7LK-R4-D4d"/>
+        <segue reference="BRR-Pr-dt3"/>
     </inferredMetricsTieBreakers>
 </document>

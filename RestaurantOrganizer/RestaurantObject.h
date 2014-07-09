@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 @class FolderObject;
+@class MenuItemObject;
 
 @interface RestaurantObject : NSObject
 
 
 -(instancetype)initWithName: (NSString *)name andDescription: (NSString *)description andFolder: (FolderObject *)folderName;
-
+-(void)addNewMenuItem: (MenuItemObject *)item;
+-(void)updateLastVisited: (NSDate *)newDate;
 
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly, copy) NSString *description;

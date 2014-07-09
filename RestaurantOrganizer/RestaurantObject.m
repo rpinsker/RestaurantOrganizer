@@ -8,6 +8,7 @@
 
 #import "RestaurantObject.h"
 #import "FolderObject.h"
+#import "MenuItemObject.h" 
 
 @interface RestaurantObject ()
 
@@ -28,6 +29,7 @@
         _privateDescription = [description mutableCopy];
         _myFolder = folderName;
         _lastVisited = [NSDate date];
+        _privateMenuItems = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -42,6 +44,17 @@
     return [self.privateDescription copy];
 }
 
+
+-(void)addNewMenuItem:(MenuItemObject *)item
+{
+    [self.privateMenuItems addObject:item];
+}
+
+
+-(void)updateLastVisited: (NSDate *)newDate
+{
+    self.lastVisited = newDate;
+}
 
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@class RestaurantObject;
 
 @interface MenuItemDetailViewController : UIViewController
+
+@property (nonatomic) RestaurantObject *restaurant; 
 
 @end

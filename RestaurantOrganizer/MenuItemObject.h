@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface MenuItemObject : NSObject
+
+-(instancetype)initWithName: (NSString *)name andDescription: (NSString *)description andImage: (UIImage *)image; 
 @property (nonatomic) NSString *itemName;
 @property (nonatomic) NSString *itemDescription;
 @end
