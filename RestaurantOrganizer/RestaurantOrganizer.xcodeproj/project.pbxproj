@@ -19,6 +19,9 @@
 		93DD715F196CBC740064B612 /* MenuItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DD715E196CBC740064B612 /* MenuItemDetailViewController.m */; };
 		93E0EE74196C4C73007362F2 /* RestaurantOrganizer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */; };
 		D8912D8B196DBE2400538C82 /* DishDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8912D8A196DBE2400538C82 /* DishDetailViewController.m */; };
+		D89E68BE196DED7E00C82222 /* XMark.png in Resources */ = {isa = PBXBuildFile; fileRef = D89E68BD196DED7E00C82222 /* XMark.png */; };
+		D89E68C2196DEF2100C82222 /* CheckMark 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D89E68C1196DEF2100C82222 /* CheckMark 2.png */; };
+		D8AF18FA196DDC10008353D2 /* candlelightdinnerblurless.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8AF18F9196DDC10008353D2 /* candlelightdinnerblurless.jpg */; };
 		D8C1CC2E196DB5BD00E641D6 /* DishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C1CC2D196DB5BD00E641D6 /* DishCell.m */; };
 		EA010D88196B7982004FF343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D87196B7982004FF343 /* Foundation.framework */; };
 		EA010D8A196B7982004FF343 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D89196B7982004FF343 /* CoreGraphics.framework */; };
@@ -68,6 +71,9 @@
 		93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RestaurantOrganizer.storyboard; sourceTree = "<group>"; };
 		D8912D89196DBE2400538C82 /* DishDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishDetailViewController.h; sourceTree = "<group>"; };
 		D8912D8A196DBE2400538C82 /* DishDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishDetailViewController.m; sourceTree = "<group>"; };
+		D89E68BD196DED7E00C82222 /* XMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XMark.png; sourceTree = "<group>"; };
+		D89E68C1196DEF2100C82222 /* CheckMark 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckMark 2.png"; sourceTree = "<group>"; };
+		D8AF18F9196DDC10008353D2 /* candlelightdinnerblurless.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = candlelightdinnerblurless.jpg; sourceTree = "<group>"; };
 		D8C1CC2C196DB5BD00E641D6 /* DishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCell.h; sourceTree = "<group>"; };
 		D8C1CC2D196DB5BD00E641D6 /* DishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCell.m; sourceTree = "<group>"; };
 		EA010D84196B7982004FF343 /* RestaurantOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +121,9 @@
 		EA010D7B196B7982004FF343 = {
 			isa = PBXGroup;
 			children = (
+				D89E68BD196DED7E00C82222 /* XMark.png */,
+				D89E68C1196DEF2100C82222 /* CheckMark 2.png */,
+				D8AF18F9196DDC10008353D2 /* candlelightdinnerblurless.jpg */,
 				93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */,
 				D8912D89196DBE2400538C82 /* DishDetailViewController.h */,
 				D8912D8A196DBE2400538C82 /* DishDetailViewController.m */,
@@ -284,7 +293,10 @@
 			files = (
 				EA010D92196B7982004FF343 /* InfoPlist.strings in Resources */,
 				93E0EE74196C4C73007362F2 /* RestaurantOrganizer.storyboard in Resources */,
+				D89E68BE196DED7E00C82222 /* XMark.png in Resources */,
+				D89E68C2196DEF2100C82222 /* CheckMark 2.png in Resources */,
 				EA010D9A196B7982004FF343 /* Images.xcassets in Resources */,
+				D8AF18FA196DDC10008353D2 /* candlelightdinnerblurless.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,8 @@
 @interface NewMenuItemViewController() <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet UITextView *commentTextView;
+
 @property (weak, nonatomic) IBOutlet UILabel *lastVisited;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -30,11 +31,13 @@
 {
     [super viewDidLoad];
     self.title = [self.restaurant name];
-    self.commentLabel.text = [self.restaurant description];
+    self.commentTextView.text = [self.restaurant description];
     NSDate *date = [self.restaurant lastVisited];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     self.lastVisited.text = [@"Last Visited: " stringByAppendingString:[dateFormatter stringFromDate:date]];
+    
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir Next Ultra Light" size:20.0]} forState:UIControlStateNormal];
 }
 
 -(void)viewWillAppear:(BOOL)animated

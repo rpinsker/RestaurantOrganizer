@@ -21,7 +21,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.view.backgroundColor =
+    [UIColor colorWithPatternImage:[UIImage imageNamed:@"candlelightdinnerblurless.jpg"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir Next Ultra Light" size:20.0]} forState:UIControlStateNormal];
     self.title = [self.folder name];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -53,6 +58,9 @@
     NSArray *restaurants = [self.folder restaurantsInFolder];
     RestaurantObject *restaurant = restaurants[indexPath.row];
     cell.textLabel.text = [restaurant name];
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir Next Ultra Light" size:27.0];
+    cell.textLabel.textColor = [UIColor colorWithRed:245.0 green:239.0 blue:237.0 alpha:1.0];
+
     
     return cell;
 }

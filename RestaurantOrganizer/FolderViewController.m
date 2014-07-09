@@ -19,6 +19,12 @@
 @end
 
 @implementation FolderViewController
+
+-(void)viewDidLoad {
+    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir Next Ultra Light" size:35.0]} forState:UIControlStateNormal];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir Next Ultra Light" size:35.0]} forState:UIControlStateNormal];
+}
+
 - (IBAction)cancelPressed:(id)sender
 {
     

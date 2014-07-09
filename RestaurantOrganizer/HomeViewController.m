@@ -40,6 +40,8 @@
     NSArray *folders = [[FolderStore sharedStore] allFolders];
     FolderObject *folder = folders[indexPath.row];
     cell.textLabel.text = [folder name];
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir Next Ultra Light" size:27.0];
+    cell.textLabel.textColor = [UIColor colorWithRed:245.0 green:239.0 blue:237.0 alpha:1.0];
     
     return cell;
 }
@@ -63,6 +65,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[[UINavigationBar appearance]setTitleTextAttributes:NSFontAttributeName: [UIFont fontWithName:@"AvenirNextUltraLight" size:20]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

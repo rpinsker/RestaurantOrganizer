@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *dishImageView;
+@property (weak, nonatomic) IBOutlet UILabel *dishNameLabel;
 @property (nonatomic, strong) MenuItemObject *dishSelected;
 
 @end

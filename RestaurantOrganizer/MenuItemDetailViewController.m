@@ -21,6 +21,14 @@
 
 @implementation MenuItemDetailViewController
 
+
+- (void) viewDidLoad
+{
+    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir Next Ultra Light" size:35.0], NSForegroundColorAttributeName: [UIColor colorWithRed:245.0 green:239.0 blue:237.0 alpha:1.0]} forState:UIControlStateNormal];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir Next Ultra Light" size:35.0]} forState:UIControlStateNormal];
+}
+
+
 - (IBAction)backgroundTapped:(id)sender
 {
     [self.view endEditing:YES];

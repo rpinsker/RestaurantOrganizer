@@ -8,13 +8,12 @@
         <scene sceneID="kgj-6s-EmV">
             <objects>
                 <navigationController id="5MB-1b-G8w" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="vdm-cV-JWf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="vdm-cV-JWf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.56527531129999997" green="0.63649341569999995" blue="0.66321331520000004" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.2375040389778984" green="0.62042904114775299" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.237504039" green="0.62042904109999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="32"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -25,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-2932" y="152"/>
         </scene>
-        <!--Home View Controller - Restaurants-->
+        <!--Home View Controller - savor-->
         <scene sceneID="fKQ-b1-QqT">
             <objects>
                 <viewController id="Z6t-t5-Sn0" customClass="HomeViewController" sceneMemberID="viewController">
@@ -37,28 +36,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XZE-Go-Gmz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="514"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candlelightdinnerblurless.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ewv-vn-z2f">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XZE-Go-Gmz">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="UfO-XO-eXi" style="IBUITableViewCellStyleDefault" id="NYs-mZ-6xP">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="UfO-XO-eXi" rowHeight="50" style="IBUITableViewCellStyleDefault" id="NYs-mZ-6xP">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NYs-mZ-6xP" id="SJb-9h-V9K">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UfO-XO-eXi">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.47193444293478259" green="0.47193444293478259" blue="0.47193444293478259" alpha="0.23000000000000001" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="Hrb-Tz-Da2" kind="modal" identifier="FromHomeToRestaurantList" id="Wrp-i2-zg1"/>
+                                            <segue destination="Hrb-Tz-Da2" kind="modal" identifier="FromHomeToRestaurantList" modalTransitionStyle="crossDissolve" id="Wrp-i2-zg1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -68,22 +73,14 @@
                                     <outlet property="delegate" destination="Z6t-t5-Sn0" id="4AM-Dr-mR1"/>
                                 </connections>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="co3-rx-LdW">
-                                <rect key="frame" x="0.0" y="514" width="320" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="sZv-WV-pPQ"/>
-                                    <tabBarItem systemItem="more" id="m4p-La-CNU"/>
-                                </items>
-                            </tabBar>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Restaurants" id="OwE-u3-sFB">
+                    <navigationItem key="navigationItem" title="savor" id="OwE-u3-sFB">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qfK-Wa-BeH">
                             <connections>
                                 <action selector="addPressed:" destination="Z6t-t5-Sn0" id="nZz-A7-EOK"/>
-                                <segue destination="PGu-8H-fPu" kind="modal" id="8UP-eY-fmh"/>
+                                <segue destination="PGu-8H-fPu" kind="modal" modalTransitionStyle="coverVertical" id="8UP-eY-fmh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -99,8 +96,13 @@
         <scene sceneID="efc-CQ-7WF">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Hrb-Tz-Da2" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H4B-mE-NzG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="H4B-mE-NzG">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="29"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="fIr-JK-T3B" kind="relationship" relationship="rootViewController" id="ldD-ig-dE5"/>
@@ -110,22 +112,23 @@
             </objects>
             <point key="canvasLocation" x="-773" y="-99"/>
         </scene>
-        <!--Restaurant List View Controller - Foo-->
+        <!--Restaurant List View Controller-->
         <scene sceneID="f5K-R3-Hic">
             <objects>
                 <tableViewController id="fIr-JK-T3B" customClass="RestaurantListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SGP-eu-4ue">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SGP-eu-4ue">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UITableViewCell" id="cWi-hG-HUj">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UITableViewCell" rowHeight="60" id="cWi-hG-HUj">
+                                <rect key="frame" x="0.0" y="86" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cWi-hG-HUj" id="T4m-vx-vy7">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.47193444289999997" green="0.47193444289999997" blue="0.47193444289999997" alpha="0.23000000000000001" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="gQr-Ou-aRp" kind="modal" identifier="restListToMenu" id="Lk4-22-PG3"/>
                                 </connections>
@@ -136,7 +139,7 @@
                             <outlet property="delegate" destination="fIr-JK-T3B" id="UrD-7h-uam"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Foo" id="snv-wt-vfq">
+                    <navigationItem key="navigationItem" id="snv-wt-vfq">
                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="UbJ-T4-yQD">
                             <connections>
                                 <segue destination="5MB-1b-G8w" kind="modal" modalTransitionStyle="crossDissolve" id="Rt1-qa-YAX"/>
@@ -150,6 +153,10 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKo-PE-4lS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candlelightdinnerblurless.jpg" id="qlN-70-JFh">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="-335" y="-99"/>
         </scene>
@@ -157,8 +164,13 @@
         <scene sceneID="me2-Fd-s8i">
             <objects>
                 <navigationController definesPresentationContext="YES" id="gQr-Ou-aRp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ieX-z9-V6F">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="ieX-z9-V6F">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="32"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="XyJ-qi-ITx" kind="relationship" relationship="rootViewController" id="D8e-ha-dyi"/>
@@ -180,27 +192,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkY-tR-Wvh">
-                                <rect key="frame" x="12" y="75" width="296" height="68"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candlelightdinnerblurless.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vdx-W0-uzj">
+                                <rect key="frame" x="-15" y="0.0" width="335" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lastvisted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQV-Mm-tah">
                                 <rect key="frame" x="20" y="66" width="264" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cHQ-bE-EaL">
-                                <rect key="frame" x="0.0" y="210" width="332" height="350"/>
+                                <rect key="frame" x="0.0" y="210" width="320" height="358"/>
+                                <color key="backgroundColor" red="0.20206351902173914" green="0.20206351902173914" blue="0.20206351902173914" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Nue-Ru-EbI">
                                     <size key="itemSize" width="153" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="Ys8-d5-mhB" customClass="DishCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="153" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="240" verticalHuggingPriority="240" reuseIdentifier="UICollectionViewCell" id="Ys8-d5-mhB" customClass="DishCell">
+                                        <rect key="frame" x="5" y="0.0" width="153" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="153" height="128"/>
@@ -214,7 +227,7 @@
                                                     <rect key="frame" x="0.0" y="107" width="155" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.53538977580000002" green="0.53538977580000002" blue="0.53538977580000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -233,9 +246,20 @@
                                     <outlet property="delegate" destination="XyJ-qi-ITx" id="4Ko-fa-ZmD"/>
                                 </connections>
                             </collectionView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sc-lg-3y3">
+                                <rect key="frame" x="0.0" y="95" width="320" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1576086957" green="0.1576086957" blue="0.1576086957" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKp-n0-2JV">
-                                <rect key="frame" x="76" y="172" width="152" height="30"/>
-                                <state key="normal" title="create new menu item">
+                                <rect key="frame" x="0.0" y="172" width="320" height="38"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="28"/>
+                                <state key="normal" title="add a new menu item">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -246,7 +270,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bq9-tI-0s4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="0iS-Uk-OPm">
+                        <barButtonItem key="rightBarButtonItem" title="done" id="0iS-Uk-OPm">
                             <connections>
                                 <segue destination="Hrb-Tz-Da2" kind="modal" identifier="menuToRestList" id="3ns-69-9Ka"/>
                             </connections>
@@ -254,7 +278,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="cHQ-bE-EaL" id="pxe-Ro-8fA"/>
-                        <outlet property="commentLabel" destination="rkY-tR-Wvh" id="Qi3-gT-f6k"/>
+                        <outlet property="commentTextView" destination="1sc-lg-3y3" id="aZD-Lx-aQ1"/>
                         <outlet property="dateLabel" destination="kQV-Mm-tah" id="4XW-TP-pfo"/>
                         <outlet property="lastVisited" destination="kQV-Mm-tah" id="Bve-Yy-jh9"/>
                     </connections>
@@ -275,17 +299,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gQo-Y5-BYK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gQo-Y5-BYK">
                                 <rect key="frame" x="0.0" y="63" width="320" height="505"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVX-G8-wNM">
                                 <rect key="frame" x="0.0" y="408" width="320" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.53538977581521741" green="0.53538977581521741" blue="0.53538977581521741" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" red="0.53538977581521741" green="0.53538977581521741" blue="0.53538977581521741" alpha="0.63" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="this is a pasgta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-O5-2Wt">
+                                <rect key="frame" x="0.0" y="372" width="320" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.44" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -294,6 +327,7 @@
                     <connections>
                         <outlet property="descriptionTextView" destination="LVX-G8-wNM" id="oqe-AR-NhL"/>
                         <outlet property="dishImageView" destination="gQo-Y5-BYK" id="nWO-hK-3d4"/>
+                        <outlet property="dishNameLabel" destination="uOn-O5-2Wt" id="2vO-p8-HFx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlt-Hc-9xB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -304,8 +338,12 @@
         <scene sceneID="vBg-U9-qZ7">
             <objects>
                 <navigationController definesPresentationContext="YES" id="9yt-Ke-OZX" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pdL-uv-1Yx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="pdL-uv-1Yx">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="20"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="lfs-i5-frA" kind="relationship" relationship="rootViewController" id="9tk-kI-I0D"/>
@@ -327,33 +365,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dish Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OS-Vs-iaL">
-                                <rect key="frame" x="30" y="109" width="94" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candlelightdinnerblurless.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WZZ-2X-jHX">
+                                <rect key="frame" x="-13" y="-5" width="333" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="enter dish name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OS-Vs-iaL">
+                                <rect key="frame" x="30" y="80" width="129" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="23"/>
+                                <color key="textColor" red="0.89092221469999999" green="0.89092221469999999" blue="0.89092221469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dish Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqA-Oi-rJz">
-                                <rect key="frame" x="30" y="158" width="131" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="was it good? describe it" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqA-Oi-rJz">
+                                <rect key="frame" x="30" y="158" width="250" height="31"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="23"/>
+                                <color key="textColor" red="0.89092221469999999" green="0.89092221469999999" blue="0.89092221469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dish name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k63-cc-aQ8">
-                                <rect key="frame" x="132" y="109" width="148" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="dish name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k63-cc-aQ8">
+                                <rect key="frame" x="30" y="109" width="250" height="41"/>
+                                <color key="backgroundColor" red="0.53538977580000002" green="0.53538977580000002" blue="0.53538977580000002" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="lfs-i5-frA" id="Ug3-aN-sIO"/>
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPu-1t-W60">
-                                <rect key="frame" x="40" y="187" width="240" height="128"/>
+                                <rect key="frame" x="30" y="191" width="250" height="117"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eng-Jn-9jJ">
-                                <rect key="frame" x="0.0" y="518" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="eng-Jn-9jJ">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="camera" id="tOP-HO-kiD">
                                         <connections>
@@ -361,9 +405,10 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bt0-0h-seC">
-                                <rect key="frame" x="40" y="333" width="240" height="174"/>
+                                <rect key="frame" x="30" y="323" width="250" height="190"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -373,12 +418,14 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="dwe-cA-R2V">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lvP-4X-hXf">
+                        <barButtonItem key="leftBarButtonItem" title="✕" id="lvP-4X-hXf">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancelPressed:" destination="lfs-i5-frA" id="Y1w-oa-of3"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fkw-Gu-3PZ">
+                        <barButtonItem key="rightBarButtonItem" title="✓" id="fkw-Gu-3PZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="gQr-Ou-aRp" kind="modal" identifier="FinishedCreatingDish" id="BRR-Pr-dt3"/>
                             </connections>
@@ -406,27 +453,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Folder Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX6-Vr-5Op">
-                                <rect key="frame" x="11" y="96" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candlelightdinnerblurless.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8a3-6f-ZPq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="574"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="create new folder:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX6-Vr-5Op">
+                                <rect key="frame" x="11" y="86" width="289" height="34"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
+                                <color key="textColor" red="0.89092221469999999" green="0.89092221469999999" blue="0.89092221469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rJ-rG-qGc">
-                                <rect key="frame" x="130" y="93" width="170" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rJ-rG-qGc">
+                                <rect key="frame" x="11" y="125" width="289" height="45"/>
+                                <color key="backgroundColor" red="0.202063519" green="0.202063519" blue="0.202063519" alpha="0.38" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PLZ-sR-dlr">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YBS-G8-buN">
+                        <barButtonItem key="leftBarButtonItem" title="✕" id="YBS-G8-buN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancelPressed:" destination="VhK-ph-kKh" id="XDX-Cj-3my"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="eO8-WO-AOg">
+                        <barButtonItem key="rightBarButtonItem" title="✓" id="eO8-WO-AOg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="donePressed:" destination="VhK-ph-kKh" id="nje-5H-ePy"/>
                             </connections>
@@ -445,8 +499,12 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="PGu-8H-fPu" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gh7-I5-vbe"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="yGi-Nt-IEv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="yGi-Nt-IEv">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="32"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="VhK-ph-kKh" kind="relationship" relationship="rootViewController" id="6KA-eu-QaO"/>
@@ -460,8 +518,13 @@
         <scene sceneID="21R-Ag-47b">
             <objects>
                 <navigationController definesPresentationContext="YES" id="WeV-PP-htj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wXH-h7-4MS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="wXH-h7-4MS">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="31"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="IJ9-vF-V5E" kind="relationship" relationship="rootViewController" id="8up-Gq-Yux"/>
@@ -471,7 +534,7 @@
             </objects>
             <point key="canvasLocation" x="1545" y="-99"/>
         </scene>
-        <!--New Restaurant View Controller - Create New Restaurant-->
+        <!--New Restaurant View Controller - add restaurant-->
         <scene sceneID="hvq-fa-Z6k">
             <objects>
                 <viewController id="IJ9-vF-V5E" customClass="NewRestaurantViewController" sceneMemberID="viewController">
@@ -479,40 +542,52 @@
                         <viewControllerLayoutGuide type="top" id="rqY-CK-fOW"/>
                         <viewControllerLayoutGuide type="bottom" id="8TY-zU-LRZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WhD-RQ-eJz">
+                    <view key="view" contentMode="scaleToFill" id="WhD-RQ-eJz" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ges-Sr-Ouc">
-                                <rect key="frame" x="20" y="95" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candlelightdinnerblurless.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JFG-Te-tAR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="restaurant name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ges-Sr-Ouc">
+                                <rect key="frame" x="20" y="89" width="280" height="38"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
+                                <color key="textColor" red="0.89092221467391308" green="0.89092221467391308" blue="0.89092221467391308" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itL-uQ-boP">
-                                <rect key="frame" x="20" y="157" width="85" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="thoughts?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itL-uQ-boP">
+                                <rect key="frame" x="20" y="175" width="158" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
+                                <color key="textColor" red="0.89092221467391308" green="0.89092221467391308" blue="0.89092221467391308" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBh-Ro-mey">
-                                <rect key="frame" x="74" y="91" width="226" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBh-Ro-mey">
+                                <rect key="frame" x="20" y="127" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.53538977580000002" green="0.53538977580000002" blue="0.53538977580000002" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="insert comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCt-wE-NoT">
-                                <rect key="frame" x="20" y="186" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dma-Qg-67c">
+                                <rect key="frame" x="20" y="212" width="280" height="205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.53538977580000002" green="0.53538977580000002" blue="0.53538977580000002" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="backgroundTapped:" destination="IJ9-vF-V5E" eventType="touchUpInside" id="6ai-Nc-VgV"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Create New Restaurant" id="5tg-vR-Np1">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GR3-ED-9cu">
+                    <navigationItem key="navigationItem" title="add restaurant" id="5tg-vR-Np1">
+                        <barButtonItem key="leftBarButtonItem" title="✕" id="GR3-ED-9cu">
                             <connections>
                                 <action selector="cancelPressed:" destination="IJ9-vF-V5E" id="y6M-nN-0z4"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="lnk-R3-Gb7">
+                        <barButtonItem key="rightBarButtonItem" title="✓" id="lnk-R3-Gb7">
                             <connections>
                                 <action selector="donePressed:" destination="IJ9-vF-V5E" id="vu2-hP-5Kq"/>
                                 <segue destination="gQr-Ou-aRp" kind="modal" identifier="FinishedNewRestaurant" id="7LK-R4-D4d"/>
@@ -520,7 +595,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="commentField" destination="QCt-wE-NoT" id="Avf-s5-JQq"/>
+                        <outlet property="commentTextField" destination="dma-Qg-67c" id="HMx-CN-5nc"/>
                         <outlet property="nameField" destination="EBh-Ro-mey" id="Qsf-5m-lJM"/>
                     </connections>
                 </viewController>
@@ -529,13 +604,16 @@
             <point key="canvasLocation" x="1932" y="-99"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="candlelightdinnerblurless.jpg" width="320" height="583"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BRR-Pr-dt3"/>
-        <segue reference="Wrp-i2-zg1"/>
+        <segue reference="3ns-69-9Ka"/>
+        <segue reference="7LK-R4-D4d"/>
     </inferredMetricsTieBreakers>
 </document>

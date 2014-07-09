@@ -15,9 +15,12 @@
 {
     [super viewDidLoad];
     
-    self.title = self.dishSelected.itemName;
     self.descriptionTextView.text = self.dishSelected.itemDescription;
     self.dishImageView.image = self.dishSelected.itemImage;
+    self.dishNameLabel.text = self.dishSelected.itemName;
+    
+    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir Next Ultra Light" size:20.0]} forState:UIControlStateNormal];
+    
 }
 
 @end
