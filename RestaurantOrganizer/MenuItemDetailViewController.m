@@ -11,7 +11,7 @@
 #import "RestaurantObject.h"
 #import "NewMenuItemViewController.h"
 
-@interface MenuItemDetailViewController() <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface MenuItemDetailViewController() <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *dishNameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *dishDescriptionTextView;
@@ -20,6 +20,13 @@
 @end
 
 @implementation MenuItemDetailViewController
+
+- (IBAction)backgroundTapped:(id)sender
+{
+    [self.view endEditing:YES];
+}
+
+
 - (IBAction)takePicture:(id)sender {
     UIImagePickerController *imagePicker =
     [[UIImagePickerController alloc] init];
@@ -53,6 +60,13 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     // Take image picker off the screen -
     // you must call this dismiss method
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 
