@@ -18,6 +18,8 @@
 		93DD715C196CBA940064B612 /* MenuItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DD715B196CBA940064B612 /* MenuItemObject.m */; };
 		93DD715F196CBC740064B612 /* MenuItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DD715E196CBC740064B612 /* MenuItemDetailViewController.m */; };
 		93E0EE74196C4C73007362F2 /* RestaurantOrganizer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */; };
+		D8912D8B196DBE2400538C82 /* DishDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8912D8A196DBE2400538C82 /* DishDetailViewController.m */; };
+		D8C1CC2E196DB5BD00E641D6 /* DishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C1CC2D196DB5BD00E641D6 /* DishCell.m */; };
 		EA010D88196B7982004FF343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D87196B7982004FF343 /* Foundation.framework */; };
 		EA010D8A196B7982004FF343 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D89196B7982004FF343 /* CoreGraphics.framework */; };
 		EA010D8C196B7982004FF343 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D8B196B7982004FF343 /* UIKit.framework */; };
@@ -64,6 +66,10 @@
 		93DD715D196CBC740064B612 /* MenuItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemDetailViewController.h; sourceTree = "<group>"; };
 		93DD715E196CBC740064B612 /* MenuItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemDetailViewController.m; sourceTree = "<group>"; };
 		93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RestaurantOrganizer.storyboard; sourceTree = "<group>"; };
+		D8912D89196DBE2400538C82 /* DishDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishDetailViewController.h; sourceTree = "<group>"; };
+		D8912D8A196DBE2400538C82 /* DishDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishDetailViewController.m; sourceTree = "<group>"; };
+		D8C1CC2C196DB5BD00E641D6 /* DishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCell.h; sourceTree = "<group>"; };
+		D8C1CC2D196DB5BD00E641D6 /* DishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCell.m; sourceTree = "<group>"; };
 		EA010D84196B7982004FF343 /* RestaurantOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA010D87196B7982004FF343 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA010D89196B7982004FF343 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -110,6 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */,
+				D8912D89196DBE2400538C82 /* DishDetailViewController.h */,
+				D8912D8A196DBE2400538C82 /* DishDetailViewController.m */,
+				D8C1CC2C196DB5BD00E641D6 /* DishCell.h */,
+				D8C1CC2D196DB5BD00E641D6 /* DishCell.m */,
 				93DD715D196CBC740064B612 /* MenuItemDetailViewController.h */,
 				93DD715E196CBC740064B612 /* MenuItemDetailViewController.m */,
 				93A86C42196C71060054D773 /* NewRestaurantViewController.h */,
@@ -302,7 +312,9 @@
 				93A86C47196C71150054D773 /* NewMenuItemViewController.m in Sources */,
 				93A86C3E196C5A640054D773 /* RestaurantObject.m in Sources */,
 				93A86C41196C65E20054D773 /* RestaurantListViewController.m in Sources */,
+				D8912D8B196DBE2400538C82 /* DishDetailViewController.m in Sources */,
 				EA010D94196B7982004FF343 /* main.m in Sources */,
+				D8C1CC2E196DB5BD00E641D6 /* DishCell.m in Sources */,
 				93DD715C196CBA940064B612 /* MenuItemObject.m in Sources */,
 				93A86C35196C56420054D773 /* HomeViewController.m in Sources */,
 			);

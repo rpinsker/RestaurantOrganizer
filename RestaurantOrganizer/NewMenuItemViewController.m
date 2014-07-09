@@ -10,6 +10,9 @@
 #import "RestaurantListViewController.h"
 #import "RestaurantObject.h"
 #import "MenuItemDetailViewController.h"
+#import "MenuItemObject.h"
+#import "DishCell.h"
+#import "DishDetailViewController.h"
 
 @interface NewMenuItemViewController() <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -58,16 +61,39 @@
         
         detailView.restaurant = self.restaurant;
     }
+    else if ([segue.identifier isEqualToString:@"menuToDishDetail"]) {
+        DishDetailViewController *dishViewController =
+        (DishDetailViewController *) segue.destinationViewController;
+        
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
+        
+        
+        dishViewController.dishSelected = [[self.restaurant menuItems] objectAtIndex:indexPath.row];
+    }
 
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
-    UIImageView *imageView = [[UIImageView alloc]initWithImage:self.restaurant.menuItems[indexPath.row]];
-    cell.backgroundView = imageView;
+    
+    DishCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+
+    MenuItemObject *menuItem = [[self.restaurant menuItems] objectAtIndex:indexPath.row];
+    UIImage *image = [menuItem itemImage];
+    
+    
+    cell.imageView.image = image;
+    cell.dishNameLabel.text = menuItem.itemName;
+
+
     
     return cell;
 }
+
+- (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

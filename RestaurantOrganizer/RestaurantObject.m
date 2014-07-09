@@ -56,5 +56,10 @@
     self.lastVisited = newDate;
 }
 
+- (NSArray *)menuItems
+{
+    return [self.privateMenuItems copy];
+}
+
 
 @end

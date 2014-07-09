@@ -13,4 +13,5 @@
 -(instancetype)initWithName: (NSString *)name andDescription: (NSString *)description andImage: (UIImage *)image; 
 @property (nonatomic) NSString *itemName;
 @property (nonatomic) NSString *itemDescription;
+@property (nonatomic) UIImage *itemImage;
 @end

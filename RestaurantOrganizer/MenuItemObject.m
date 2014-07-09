@@ -12,7 +12,7 @@
 
 @property (nonatomic) NSMutableString *privateItemName;
 @property (nonatomic) NSMutableString *privateItemDescription;
-@property (nonatomic) UIImage *itemImage;
+//@property (nonatomic) UIImage *itemImage;
 
 @end
 
