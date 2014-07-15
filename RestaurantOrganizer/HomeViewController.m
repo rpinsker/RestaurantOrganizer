@@ -11,9 +11,11 @@
 #import "FolderObject.h"
 #import "FolderStore.h"
 #import "RestaurantListViewController.h"
+#import <Parse/Parse.h>
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong,nonatomic) NSArray *folders;
 
 @end
 
@@ -22,7 +24,9 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [[[FolderStore sharedStore] allFolders] count];
+    //return [[[FolderStore sharedStore] allFolders] count];
+
+    return [self.folders count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -37,9 +41,13 @@
     // Set the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
     // will appear in on the tableview
-    NSArray *folders = [[FolderStore sharedStore] allFolders];
-    FolderObject *folder = folders[indexPath.row];
-    cell.textLabel.text = [folder name];
+
+    
+    //NSArray *folders = [[FolderStore sharedStore] allFolders];
+    //FolderObject *folder = folders[indexPath.row];
+    //cell.textLabel.text = [folder name];
+    PFObject *folder = self.folders[indexPath.row];
+    cell.textLabel.text = folder[@"name"];
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next Ultra Light" size:27.0];
     cell.textLabel.textColor = [UIColor colorWithRed:245.0 green:239.0 blue:237.0 alpha:1.0];
     
@@ -56,7 +64,7 @@
         
         NSArray *folders= [[FolderStore sharedStore] allFolders];
         NSIndexPath *ip = [self.tableView indexPathForCell:sender];
-        FolderObject *folder = folders[ip.row];
+        PFObject *folder = folders[ip.row];
         listViewController.folder = folder;
     }
 }
@@ -65,6 +73,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    PFRelation *ownedFolders = [[PFUser currentUser] relationForKey:@"ownedFolders"];
+    PFQuery *query = [ownedFolders query];
+    self.folders = [query findObjects];
     //[[UINavigationBar appearance]setTitleTextAttributes:NSFontAttributeName: [UIFont fontWithName:@"AvenirNextUltraLight" size:20]];
 }
 

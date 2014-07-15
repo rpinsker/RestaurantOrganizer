@@ -8,9 +8,10 @@
 
 #import "FolderViewController.h"
 #import "FolderStore.h"
+#import <Parse/Parse.h>
 
 
-@interface FolderViewController ()
+@interface FolderViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *folderName;
 
@@ -31,14 +32,50 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    NSString *name = _folderName.text;
+    [[FolderStore sharedStore] createFolderWithName:name];
+    
+    PFUser *u = [PFUser currentUser];
+    
+    PFObject *folder = [PFObject objectWithClassName:@"Folder"];
+    folder[@"name"] = name;
+    folder[@"owner"] = u;
+    [folder save];
+    
+    
+    PFRelation *userToFolders = [u relationForKey:@"ownedFolders"];
+    [userToFolders addObject:folder];
+    [u saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+    }];
+    return YES;
+}
+
 
 - (IBAction)donePressed:(id)sender
 {
     NSString *name = _folderName.text;
     [[FolderStore sharedStore] createFolderWithName:name];
     
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+    /* parse */
+    PFUser *u = [PFUser currentUser];
     
+    PFObject *folder = [PFObject objectWithClassName:@"Folder"];
+    folder[@"name"] = name;
+    folder[@"owner"] = u;
+    [folder save];
+    
+    
+    PFRelation *userToFolders = [u relationForKey:@"ownedFolders"];
+    [userToFolders addObject:folder];
+    [u saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+    }];
+    
+    /* end parse */
 }
 
 

@@ -35,6 +35,17 @@
 		EA010DA3196B7982004FF343 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA010D8B196B7982004FF343 /* UIKit.framework */; };
 		EA010DAB196B7982004FF343 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA010DA9196B7982004FF343 /* InfoPlist.strings */; };
 		EA010DAD196B7982004FF343 /* RestaurantOrganizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA010DAC196B7982004FF343 /* RestaurantOrganizerTests.m */; };
+		EAF3E6B61974E85300183732 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6B51974E85300183732 /* Parse.framework */; };
+		EAF3E6C01974E93B00183732 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6B71974E93B00183732 /* AudioToolbox.framework */; };
+		EAF3E6C11974E93B00183732 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6B81974E93B00183732 /* CFNetwork.framework */; };
+		EAF3E6C21974E93B00183732 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6B91974E93B00183732 /* CoreLocation.framework */; };
+		EAF3E6C31974E93B00183732 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6BA1974E93B00183732 /* libz.dylib */; };
+		EAF3E6C41974E93B00183732 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6BB1974E93B00183732 /* MobileCoreServices.framework */; };
+		EAF3E6C51974E93B00183732 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6BC1974E93B00183732 /* QuartzCore.framework */; };
+		EAF3E6C61974E93B00183732 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6BD1974E93B00183732 /* Security.framework */; };
+		EAF3E6C71974E93B00183732 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6BE1974E93B00183732 /* StoreKit.framework */; };
+		EAF3E6C81974E93B00183732 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF3E6BF1974E93B00183732 /* SystemConfiguration.framework */; };
+		EAF3E6CB1974F90D00183732 /* signUpLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF3E6CA1974F90D00183732 /* signUpLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +103,18 @@
 		EA010DA8196B7982004FF343 /* RestaurantOrganizerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestaurantOrganizerTests-Info.plist"; sourceTree = "<group>"; };
 		EA010DAA196B7982004FF343 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA010DAC196B7982004FF343 /* RestaurantOrganizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantOrganizerTests.m; sourceTree = "<group>"; };
+		EAF3E6B51974E85300183732 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		EAF3E6B71974E93B00183732 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EAF3E6B81974E93B00183732 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EAF3E6B91974E93B00183732 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EAF3E6BA1974E93B00183732 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EAF3E6BB1974E93B00183732 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EAF3E6BC1974E93B00183732 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EAF3E6BD1974E93B00183732 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EAF3E6BE1974E93B00183732 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EAF3E6BF1974E93B00183732 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EAF3E6C91974F90D00183732 /* signUpLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signUpLoginViewController.h; sourceTree = "<group>"; };
+		EAF3E6CA1974F90D00183732 /* signUpLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signUpLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +122,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF3E6C01974E93B00183732 /* AudioToolbox.framework in Frameworks */,
+				EAF3E6C11974E93B00183732 /* CFNetwork.framework in Frameworks */,
+				EAF3E6C21974E93B00183732 /* CoreLocation.framework in Frameworks */,
+				EAF3E6C31974E93B00183732 /* libz.dylib in Frameworks */,
+				EAF3E6C41974E93B00183732 /* MobileCoreServices.framework in Frameworks */,
+				EAF3E6C51974E93B00183732 /* QuartzCore.framework in Frameworks */,
+				EAF3E6C61974E93B00183732 /* Security.framework in Frameworks */,
+				EAF3E6C71974E93B00183732 /* StoreKit.framework in Frameworks */,
+				EAF3E6C81974E93B00183732 /* SystemConfiguration.framework in Frameworks */,
 				EA010D8A196B7982004FF343 /* CoreGraphics.framework in Frameworks */,
 				EA010D8C196B7982004FF343 /* UIKit.framework in Frameworks */,
+				EAF3E6B61974E85300183732 /* Parse.framework in Frameworks */,
 				EA010D88196B7982004FF343 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,10 +154,13 @@
 		EA010D7B196B7982004FF343 = {
 			isa = PBXGroup;
 			children = (
+				EAF3E6B51974E85300183732 /* Parse.framework */,
 				D89E68BD196DED7E00C82222 /* XMark.png */,
 				D89E68C1196DEF2100C82222 /* CheckMark 2.png */,
 				D8AF18F9196DDC10008353D2 /* candlelightdinnerblurless.jpg */,
 				93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */,
+				EAF3E6C91974F90D00183732 /* signUpLoginViewController.h */,
+				EAF3E6CA1974F90D00183732 /* signUpLoginViewController.m */,
 				D8912D89196DBE2400538C82 /* DishDetailViewController.h */,
 				D8912D8A196DBE2400538C82 /* DishDetailViewController.m */,
 				D8C1CC2C196DB5BD00E641D6 /* DishCell.h */,
@@ -168,6 +204,15 @@
 		EA010D86196B7982004FF343 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAF3E6B71974E93B00183732 /* AudioToolbox.framework */,
+				EAF3E6B81974E93B00183732 /* CFNetwork.framework */,
+				EAF3E6B91974E93B00183732 /* CoreLocation.framework */,
+				EAF3E6BA1974E93B00183732 /* libz.dylib */,
+				EAF3E6BB1974E93B00183732 /* MobileCoreServices.framework */,
+				EAF3E6BC1974E93B00183732 /* QuartzCore.framework */,
+				EAF3E6BD1974E93B00183732 /* Security.framework */,
+				EAF3E6BE1974E93B00183732 /* StoreKit.framework */,
+				EAF3E6BF1974E93B00183732 /* SystemConfiguration.framework */,
 				EA010D87196B7982004FF343 /* Foundation.framework */,
 				EA010D89196B7982004FF343 /* CoreGraphics.framework */,
 				EA010D8B196B7982004FF343 /* UIKit.framework */,
@@ -322,6 +367,7 @@
 				93A86C44196C71060054D773 /* NewRestaurantViewController.m in Sources */,
 				93A86C38196C5A530054D773 /* FolderStore.m in Sources */,
 				93A86C47196C71150054D773 /* NewMenuItemViewController.m in Sources */,
+				EAF3E6CB1974F90D00183732 /* signUpLoginViewController.m in Sources */,
 				93A86C3E196C5A640054D773 /* RestaurantObject.m in Sources */,
 				93A86C41196C65E20054D773 /* RestaurantListViewController.m in Sources */,
 				D8912D8B196DBE2400538C82 /* DishDetailViewController.m in Sources */,
@@ -445,6 +491,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RestaurantOrganizer/RestaurantOrganizer-Prefix.pch";
 				INFOPLIST_FILE = "RestaurantOrganizer/RestaurantOrganizer-Info.plist";
@@ -458,6 +508,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RestaurantOrganizer/RestaurantOrganizer-Prefix.pch";
 				INFOPLIST_FILE = "RestaurantOrganizer/RestaurantOrganizer-Info.plist";
