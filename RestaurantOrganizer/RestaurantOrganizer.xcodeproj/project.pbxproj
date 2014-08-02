@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93A86C32196C549C0054D773 /* FolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C31196C549C0054D773 /* FolderViewController.m */; };
-		93A86C35196C56420054D773 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C34196C56420054D773 /* HomeViewController.m */; };
+		93A86C32196C549C0054D773 /* Savor_AddFolderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C31196C549C0054D773 /* Savor_AddFolderVC.m */; };
+		93A86C35196C56420054D773 /* Savor_FolderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C34196C56420054D773 /* Savor_FolderListVC.m */; };
 		93A86C38196C5A530054D773 /* FolderStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C37196C5A530054D773 /* FolderStore.m */; };
 		93A86C3B196C5A5C0054D773 /* FolderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C3A196C5A5C0054D773 /* FolderObject.m */; };
 		93A86C3E196C5A640054D773 /* RestaurantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C3D196C5A640054D773 /* RestaurantObject.m */; };
-		93A86C41196C65E20054D773 /* RestaurantListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C40196C65E20054D773 /* RestaurantListViewController.m */; };
-		93A86C44196C71060054D773 /* NewRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C43196C71060054D773 /* NewRestaurantViewController.m */; };
-		93A86C47196C71150054D773 /* NewMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C46196C71150054D773 /* NewMenuItemViewController.m */; };
+		93A86C41196C65E20054D773 /* Savor_RestaurantListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C40196C65E20054D773 /* Savor_RestaurantListVC.m */; };
+		93A86C44196C71060054D773 /* Savor_AddRestaurantVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C43196C71060054D773 /* Savor_AddRestaurantVC.m */; };
+		93A86C47196C71150054D773 /* Savor_RestaurantVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A86C46196C71150054D773 /* Savor_RestaurantVC.m */; };
 		93DD715C196CBA940064B612 /* MenuItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DD715B196CBA940064B612 /* MenuItemObject.m */; };
-		93DD715F196CBC740064B612 /* MenuItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DD715E196CBC740064B612 /* MenuItemDetailViewController.m */; };
+		93DD715F196CBC740064B612 /* Savor_AddMenuItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DD715E196CBC740064B612 /* Savor_AddMenuItemVC.m */; };
 		93E0EE74196C4C73007362F2 /* RestaurantOrganizer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */; };
-		D8912D8B196DBE2400538C82 /* DishDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8912D8A196DBE2400538C82 /* DishDetailViewController.m */; };
+		D8912D8B196DBE2400538C82 /* Savor_MenuItemDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8912D8A196DBE2400538C82 /* Savor_MenuItemDetailVC.m */; };
 		D89E68BE196DED7E00C82222 /* XMark.png in Resources */ = {isa = PBXBuildFile; fileRef = D89E68BD196DED7E00C82222 /* XMark.png */; };
 		D89E68C2196DEF2100C82222 /* CheckMark 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D89E68C1196DEF2100C82222 /* CheckMark 2.png */; };
 		D8AF18FA196DDC10008353D2 /* candlelightdinnerblurless.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8AF18F9196DDC10008353D2 /* candlelightdinnerblurless.jpg */; };
@@ -59,29 +59,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93A86C30196C549C0054D773 /* FolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderViewController.h; sourceTree = "<group>"; };
-		93A86C31196C549C0054D773 /* FolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderViewController.m; sourceTree = "<group>"; };
-		93A86C33196C56420054D773 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		93A86C34196C56420054D773 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		93A86C30196C549C0054D773 /* Savor_AddFolderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Savor_AddFolderVC.h; sourceTree = "<group>"; };
+		93A86C31196C549C0054D773 /* Savor_AddFolderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Savor_AddFolderVC.m; sourceTree = "<group>"; };
+		93A86C33196C56420054D773 /* Savor_FolderListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Savor_FolderListVC.h; sourceTree = "<group>"; };
+		93A86C34196C56420054D773 /* Savor_FolderListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Savor_FolderListVC.m; sourceTree = "<group>"; };
 		93A86C36196C5A530054D773 /* FolderStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderStore.h; sourceTree = "<group>"; };
 		93A86C37196C5A530054D773 /* FolderStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderStore.m; sourceTree = "<group>"; };
 		93A86C39196C5A5C0054D773 /* FolderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderObject.h; sourceTree = "<group>"; };
 		93A86C3A196C5A5C0054D773 /* FolderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderObject.m; sourceTree = "<group>"; };
 		93A86C3C196C5A640054D773 /* RestaurantObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantObject.h; sourceTree = "<group>"; };
 		93A86C3D196C5A640054D773 /* RestaurantObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantObject.m; sourceTree = "<group>"; };
-		93A86C3F196C65E20054D773 /* RestaurantListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantListViewController.h; sourceTree = "<group>"; };
-		93A86C40196C65E20054D773 /* RestaurantListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantListViewController.m; sourceTree = "<group>"; };
-		93A86C42196C71060054D773 /* NewRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRestaurantViewController.h; sourceTree = "<group>"; };
-		93A86C43196C71060054D773 /* NewRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRestaurantViewController.m; sourceTree = "<group>"; };
-		93A86C45196C71150054D773 /* NewMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMenuItemViewController.h; sourceTree = "<group>"; };
-		93A86C46196C71150054D773 /* NewMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMenuItemViewController.m; sourceTree = "<group>"; };
+		93A86C3F196C65E20054D773 /* Savor_RestaurantListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Savor_RestaurantListVC.h; sourceTree = "<group>"; };
+		93A86C40196C65E20054D773 /* Savor_RestaurantListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Savor_RestaurantListVC.m; sourceTree = "<group>"; };
+		93A86C42196C71060054D773 /* Savor_AddRestaurantVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Savor_AddRestaurantVC.h; sourceTree = "<group>"; };
+		93A86C43196C71060054D773 /* Savor_AddRestaurantVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Savor_AddRestaurantVC.m; sourceTree = "<group>"; };
+		93A86C45196C71150054D773 /* Savor_RestaurantVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Savor_RestaurantVC.h; sourceTree = "<group>"; };
+		93A86C46196C71150054D773 /* Savor_RestaurantVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Savor_RestaurantVC.m; sourceTree = "<group>"; };
 		93DD715A196CBA940064B612 /* MenuItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemObject.h; sourceTree = "<group>"; };
 		93DD715B196CBA940064B612 /* MenuItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemObject.m; sourceTree = "<group>"; };
-		93DD715D196CBC740064B612 /* MenuItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemDetailViewController.h; sourceTree = "<group>"; };
-		93DD715E196CBC740064B612 /* MenuItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemDetailViewController.m; sourceTree = "<group>"; };
+		93DD715D196CBC740064B612 /* Savor_AddMenuItemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Savor_AddMenuItemVC.h; sourceTree = "<group>"; };
+		93DD715E196CBC740064B612 /* Savor_AddMenuItemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Savor_AddMenuItemVC.m; sourceTree = "<group>"; };
 		93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RestaurantOrganizer.storyboard; sourceTree = "<group>"; };
-		D8912D89196DBE2400538C82 /* DishDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishDetailViewController.h; sourceTree = "<group>"; };
-		D8912D8A196DBE2400538C82 /* DishDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishDetailViewController.m; sourceTree = "<group>"; };
+		D8912D89196DBE2400538C82 /* Savor_MenuItemDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Savor_MenuItemDetailVC.h; sourceTree = "<group>"; };
+		D8912D8A196DBE2400538C82 /* Savor_MenuItemDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Savor_MenuItemDetailVC.m; sourceTree = "<group>"; };
 		D89E68BD196DED7E00C82222 /* XMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XMark.png; sourceTree = "<group>"; };
 		D89E68C1196DEF2100C82222 /* CheckMark 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckMark 2.png"; sourceTree = "<group>"; };
 		D8AF18F9196DDC10008353D2 /* candlelightdinnerblurless.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = candlelightdinnerblurless.jpg; sourceTree = "<group>"; };
@@ -154,37 +154,8 @@
 		EA010D7B196B7982004FF343 = {
 			isa = PBXGroup;
 			children = (
-				EAF3E6B51974E85300183732 /* Parse.framework */,
-				D89E68BD196DED7E00C82222 /* XMark.png */,
-				D89E68C1196DEF2100C82222 /* CheckMark 2.png */,
-				D8AF18F9196DDC10008353D2 /* candlelightdinnerblurless.jpg */,
-				93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */,
-				EAF3E6C91974F90D00183732 /* signUpLoginViewController.h */,
-				EAF3E6CA1974F90D00183732 /* signUpLoginViewController.m */,
-				D8912D89196DBE2400538C82 /* DishDetailViewController.h */,
-				D8912D8A196DBE2400538C82 /* DishDetailViewController.m */,
-				D8C1CC2C196DB5BD00E641D6 /* DishCell.h */,
-				D8C1CC2D196DB5BD00E641D6 /* DishCell.m */,
-				93DD715D196CBC740064B612 /* MenuItemDetailViewController.h */,
-				93DD715E196CBC740064B612 /* MenuItemDetailViewController.m */,
-				93A86C42196C71060054D773 /* NewRestaurantViewController.h */,
-				93A86C43196C71060054D773 /* NewRestaurantViewController.m */,
-				93A86C45196C71150054D773 /* NewMenuItemViewController.h */,
-				93A86C46196C71150054D773 /* NewMenuItemViewController.m */,
-				93A86C36196C5A530054D773 /* FolderStore.h */,
-				93A86C37196C5A530054D773 /* FolderStore.m */,
-				93A86C39196C5A5C0054D773 /* FolderObject.h */,
-				93A86C3A196C5A5C0054D773 /* FolderObject.m */,
-				93A86C3C196C5A640054D773 /* RestaurantObject.h */,
-				93A86C3D196C5A640054D773 /* RestaurantObject.m */,
-				93DD715A196CBA940064B612 /* MenuItemObject.h */,
-				93DD715B196CBA940064B612 /* MenuItemObject.m */,
-				93A86C33196C56420054D773 /* HomeViewController.h */,
-				93A86C34196C56420054D773 /* HomeViewController.m */,
-				93A86C3F196C65E20054D773 /* RestaurantListViewController.h */,
-				93A86C40196C65E20054D773 /* RestaurantListViewController.m */,
-				93A86C30196C549C0054D773 /* FolderViewController.h */,
-				93A86C31196C549C0054D773 /* FolderViewController.m */,
+				EA16A45F198DA22400C14C90 /* data */,
+				EA16A45C198DA1E100C14C90 /* UI */,
 				EA010D8D196B7982004FF343 /* RestaurantOrganizer */,
 				EA010DA6196B7982004FF343 /* RestaurantOrganizerTests */,
 				EA010D86196B7982004FF343 /* Frameworks */,
@@ -204,6 +175,7 @@
 		EA010D86196B7982004FF343 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAF3E6B51974E85300183732 /* Parse.framework */,
 				EAF3E6B71974E93B00183732 /* AudioToolbox.framework */,
 				EAF3E6B81974E93B00183732 /* CFNetwork.framework */,
 				EAF3E6B91974E93B00183732 /* CoreLocation.framework */,
@@ -259,6 +231,98 @@
 				EA010DA9196B7982004FF343 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA16A45C198DA1E100C14C90 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				93E0EE73196C4C73007362F2 /* RestaurantOrganizer.storyboard */,
+				EA16A45E198DA20600C14C90 /* resources */,
+				EA16A45D198DA1FC00C14C90 /* VCs */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		EA16A45D198DA1FC00C14C90 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				EA16A463198DA28E00C14C90 /* folder VCs */,
+				EA16A461198DA26C00C14C90 /* restaurant VCs */,
+				EA16A462198DA27A00C14C90 /* menu item VCs */,
+				EA16A460198DA25000C14C90 /* sign up/login */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
+		EA16A45E198DA20600C14C90 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				D89E68BD196DED7E00C82222 /* XMark.png */,
+				D89E68C1196DEF2100C82222 /* CheckMark 2.png */,
+				D8AF18F9196DDC10008353D2 /* candlelightdinnerblurless.jpg */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		EA16A45F198DA22400C14C90 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				D8C1CC2C196DB5BD00E641D6 /* DishCell.h */,
+				D8C1CC2D196DB5BD00E641D6 /* DishCell.m */,
+				93A86C36196C5A530054D773 /* FolderStore.h */,
+				93A86C37196C5A530054D773 /* FolderStore.m */,
+				93A86C39196C5A5C0054D773 /* FolderObject.h */,
+				93A86C3A196C5A5C0054D773 /* FolderObject.m */,
+				93A86C3C196C5A640054D773 /* RestaurantObject.h */,
+				93A86C3D196C5A640054D773 /* RestaurantObject.m */,
+				93DD715A196CBA940064B612 /* MenuItemObject.h */,
+				93DD715B196CBA940064B612 /* MenuItemObject.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		EA16A460198DA25000C14C90 /* sign up/login */ = {
+			isa = PBXGroup;
+			children = (
+				EAF3E6C91974F90D00183732 /* signUpLoginViewController.h */,
+				EAF3E6CA1974F90D00183732 /* signUpLoginViewController.m */,
+			);
+			name = "sign up/login";
+			sourceTree = "<group>";
+		};
+		EA16A461198DA26C00C14C90 /* restaurant VCs */ = {
+			isa = PBXGroup;
+			children = (
+				93A86C45196C71150054D773 /* Savor_RestaurantVC.h */,
+				93A86C46196C71150054D773 /* Savor_RestaurantVC.m */,
+				93A86C3F196C65E20054D773 /* Savor_RestaurantListVC.h */,
+				93A86C40196C65E20054D773 /* Savor_RestaurantListVC.m */,
+				93A86C42196C71060054D773 /* Savor_AddRestaurantVC.h */,
+				93A86C43196C71060054D773 /* Savor_AddRestaurantVC.m */,
+			);
+			name = "restaurant VCs";
+			sourceTree = "<group>";
+		};
+		EA16A462198DA27A00C14C90 /* menu item VCs */ = {
+			isa = PBXGroup;
+			children = (
+				D8912D89196DBE2400538C82 /* Savor_MenuItemDetailVC.h */,
+				D8912D8A196DBE2400538C82 /* Savor_MenuItemDetailVC.m */,
+				93DD715D196CBC740064B612 /* Savor_AddMenuItemVC.h */,
+				93DD715E196CBC740064B612 /* Savor_AddMenuItemVC.m */,
+			);
+			name = "menu item VCs";
+			sourceTree = "<group>";
+		};
+		EA16A463198DA28E00C14C90 /* folder VCs */ = {
+			isa = PBXGroup;
+			children = (
+				93A86C33196C56420054D773 /* Savor_FolderListVC.h */,
+				93A86C34196C56420054D773 /* Savor_FolderListVC.m */,
+				93A86C30196C549C0054D773 /* Savor_AddFolderVC.h */,
+				93A86C31196C549C0054D773 /* Savor_AddFolderVC.m */,
+			);
+			name = "folder VCs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,21 +424,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A86C32196C549C0054D773 /* FolderViewController.m in Sources */,
+				93A86C32196C549C0054D773 /* Savor_AddFolderVC.m in Sources */,
 				EA010D98196B7982004FF343 /* AppDelegate.m in Sources */,
 				93A86C3B196C5A5C0054D773 /* FolderObject.m in Sources */,
-				93DD715F196CBC740064B612 /* MenuItemDetailViewController.m in Sources */,
-				93A86C44196C71060054D773 /* NewRestaurantViewController.m in Sources */,
+				93DD715F196CBC740064B612 /* Savor_AddMenuItemVC.m in Sources */,
+				93A86C44196C71060054D773 /* Savor_AddRestaurantVC.m in Sources */,
 				93A86C38196C5A530054D773 /* FolderStore.m in Sources */,
-				93A86C47196C71150054D773 /* NewMenuItemViewController.m in Sources */,
+				93A86C47196C71150054D773 /* Savor_RestaurantVC.m in Sources */,
 				EAF3E6CB1974F90D00183732 /* signUpLoginViewController.m in Sources */,
 				93A86C3E196C5A640054D773 /* RestaurantObject.m in Sources */,
-				93A86C41196C65E20054D773 /* RestaurantListViewController.m in Sources */,
-				D8912D8B196DBE2400538C82 /* DishDetailViewController.m in Sources */,
+				93A86C41196C65E20054D773 /* Savor_RestaurantListVC.m in Sources */,
+				D8912D8B196DBE2400538C82 /* Savor_MenuItemDetailVC.m in Sources */,
 				EA010D94196B7982004FF343 /* main.m in Sources */,
 				D8C1CC2E196DB5BD00E641D6 /* DishCell.m in Sources */,
 				93DD715C196CBA940064B612 /* MenuItemObject.m in Sources */,
-				93A86C35196C56420054D773 /* HomeViewController.m in Sources */,
+				93A86C35196C56420054D773 /* Savor_FolderListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

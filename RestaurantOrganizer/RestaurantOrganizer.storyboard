@@ -156,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="-2644" y="-838"/>
         </scene>
-        <!--Home View Controller - savor-->
+        <!--Savor Folder ListVC - savor-->
         <scene sceneID="fKQ-b1-QqT">
             <objects>
-                <viewController storyboardIdentifier="homeView" id="Z6t-t5-Sn0" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeView" id="Z6t-t5-Sn0" customClass="Savor_FolderListVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wTY-sn-Cif"/>
                         <viewControllerLayoutGuide type="bottom" id="UuC-wF-yrb"/>
@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="-773" y="-99"/>
         </scene>
-        <!--Restaurant List View Controller-->
+        <!--Savor Restaurant ListVC-->
         <scene sceneID="f5K-R3-Hic">
             <objects>
-                <tableViewController id="fIr-JK-T3B" customClass="RestaurantListViewController" sceneMemberID="viewController">
+                <tableViewController id="fIr-JK-T3B" customClass="Savor_RestaurantListVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SGP-eu-4ue">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,10 +312,10 @@
             </objects>
             <point key="canvasLocation" x="572" y="1163"/>
         </scene>
-        <!--New Menu Item View Controller-->
+        <!--Savor RestaurantVC-->
         <scene sceneID="ZQ7-nj-P7t">
             <objects>
-                <viewController id="XyJ-qi-ITx" customClass="NewMenuItemViewController" sceneMemberID="viewController">
+                <viewController id="XyJ-qi-ITx" customClass="Savor_RestaurantVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pRe-4j-cvc"/>
                         <viewControllerLayoutGuide type="bottom" id="bdf-2e-oYP"/>
@@ -419,10 +419,10 @@
             </objects>
             <point key="canvasLocation" x="960" y="1163"/>
         </scene>
-        <!--Dish Detail View Controller-->
+        <!--Savor Menu Item DetailVC-->
         <scene sceneID="zYx-uR-ZzM">
             <objects>
-                <viewController id="F4c-Fx-wRI" customClass="DishDetailViewController" sceneMemberID="viewController">
+                <viewController id="F4c-Fx-wRI" customClass="Savor_MenuItemDetailVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yb8-eL-ECN"/>
                         <viewControllerLayoutGuide type="bottom" id="ltn-dS-jop"/>
@@ -485,10 +485,10 @@
             </objects>
             <point key="canvasLocation" x="1531" y="1163"/>
         </scene>
-        <!--Menu Item Detail View Controller-->
+        <!--Savor Add Menu ItemVC-->
         <scene sceneID="1wM-oR-U1z">
             <objects>
-                <viewController id="lfs-i5-frA" customClass="MenuItemDetailViewController" sceneMemberID="viewController">
+                <viewController id="lfs-i5-frA" customClass="Savor_AddMenuItemVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DSs-Jj-oK1"/>
                         <viewControllerLayoutGuide type="bottom" id="zHa-YG-d6m"/>
@@ -573,10 +573,10 @@
             </objects>
             <point key="canvasLocation" x="1913" y="1163"/>
         </scene>
-        <!--Folder View Controller-->
+        <!--Savor Add FolderVC-->
         <scene sceneID="Hsn-rx-L1y">
             <objects>
-                <viewController id="VhK-ph-kKh" customClass="FolderViewController" sceneMemberID="viewController">
+                <viewController id="VhK-ph-kKh" customClass="Savor_AddFolderVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5xU-k3-CSg"/>
                         <viewControllerLayoutGuide type="bottom" id="OfH-iC-GCX"/>
@@ -669,10 +669,10 @@
             </objects>
             <point key="canvasLocation" x="1545" y="-99"/>
         </scene>
-        <!--New Restaurant View Controller - add restaurant-->
+        <!--Savor Add RestaurantVC - add restaurant-->
         <scene sceneID="hvq-fa-Z6k">
             <objects>
-                <viewController id="IJ9-vF-V5E" customClass="NewRestaurantViewController" sceneMemberID="viewController">
+                <viewController id="IJ9-vF-V5E" customClass="Savor_AddRestaurantVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rqY-CK-fOW"/>
                         <viewControllerLayoutGuide type="bottom" id="8TY-zU-LRZ"/>

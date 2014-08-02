@@ -7,7 +7,7 @@
 //
 
 #import "signUpLoginViewController.h"
-#import "HomeViewController.h"
+#import "Savor_FolderListVC.h"
 #import <Parse/Parse.h>
 
 @interface signUpLoginViewController ()
