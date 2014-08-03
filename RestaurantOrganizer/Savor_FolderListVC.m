@@ -16,6 +16,8 @@
 @interface Savor_FolderListVC () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray *folders;
+@property (strong, nonatomic) NSArray *subscribedFolders;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
 
@@ -24,7 +26,11 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [self.folders count];
+    
+    if (self.segmentedControl.selectedSegmentIndex == 0)
+        return [self.folders count];
+    else
+        return [self.subscribedFolders count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -44,7 +50,12 @@
     //NSArray *folders = [[FolderStore sharedStore] allFolders];
     //FolderObject *folder = folders[indexPath.row];
     //cell.textLabel.text = [folder name];
-    PFObject *folder = self.folders[indexPath.row];
+    PFObject *folder;
+    if (self.segmentedControl.selectedSegmentIndex == 0)
+        folder = self.folders[indexPath.row];
+    else
+        folder = self.subscribedFolders[indexPath.row];
+    [folder fetchIfNeeded];
     cell.textLabel.text = folder[@"name"];
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next Ultra Light" size:27.0];
     cell.textLabel.textColor = [UIColor colorWithRed:245.0 green:239.0 blue:237.0 alpha:1.0];
@@ -52,6 +63,10 @@
     return cell;
 }
 
+- (IBAction)switchPressed:(id)sender
+{
+    [self.tableView reloadData];
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
@@ -63,7 +78,13 @@
         (Savor_RestaurantListVC *)[nc topViewController];
         
         NSIndexPath *ip = [self.tableView indexPathForCell:sender];
-        PFObject *folder = self.folders[ip.row];
+        PFObject *folder;
+        
+        if (self.segmentedControl.selectedSegmentIndex == 0)
+            folder = self.folders[ip.row];
+        else
+            folder = self.subscribedFolders[ip.row];
+        
         listViewController.folderPFObject = folder;
     }
 }
@@ -76,6 +97,11 @@
     //[[UINavigationBar appearance]setTitleTextAttributes:NSFontAttributeName: [UIFont fontWithName:@"AvenirNextUltraLight" size:20]];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -83,6 +109,16 @@
     PFRelation *ownedFolders = [[PFUser currentUser] relationForKey:@"ownedFolders"];
     PFQuery *query = [ownedFolders query];
     self.folders = [query findObjects];
+    
+    PFQuery *subscriptionQuery = [PFQuery queryWithClassName:@"Subscriptions"];
+    [subscriptionQuery whereKey:@"subscriber" equalTo:[PFUser currentUser]];
+    [subscriptionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSMutableArray *folders = [NSMutableArray new];
+        for (PFObject *subscription in objects) {
+            [folders addObject:subscription[@"folder"]];
+        }
+        self.subscribedFolders = folders;
+    }];
     
     [self.tableView reloadData];
 //    [self updateTableViewForDynamicTypeSize];
