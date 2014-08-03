@@ -40,14 +40,15 @@
         restaurant[@"name"] = self.nameField.text;
         restaurant[@"description"] = self.commentTextField.text;
         restaurant[@"lastVisited"] = [NSDate date];
+        restaurant[@"myFolderPointer"] = self.currentFolderPFObject;
         
-        [restaurant saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            // add it to the current folder
-            PFRelation *relation = [self.currentFolderPFObject relationForKey:@"ownedRestaurants"]; 
-            [relation addObject:restaurant];
-            
-            [self.currentFolderPFObject saveInBackground];
-        }];
+        [restaurant save];
+         
+         // add it to the current folder
+         PFRelation *relation = [self.currentFolderPFObject relationForKey:@"ownedRestaurants"];
+         [relation addObject:restaurant];
+
+         [self.currentFolderPFObject save];
         
         newItem.restaurantPFObject = restaurant; 
 

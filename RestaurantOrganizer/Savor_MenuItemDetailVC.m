@@ -18,6 +18,17 @@
     self.dishNameLabel.text = self.dishPFObject[@"name"];
     self.descriptionTextView.text = self.dishPFObject[@"description"];
     
+    PFFile *imageFile = self.dishPFObject[@"image"];
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            UIImage *image = [UIImage imageWithData:data];
+            [self.dishImageView setImage:image];
+        }
+        else {
+            NSLog(@"Encountered error while fetching image: %@", error.userInfo[@"error"]);
+        }
+    }];
+    
     [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir Next Ultra Light" size:20.0]} forState:UIControlStateNormal];
 }
 

@@ -16,4 +16,10 @@
 @property (nonatomic) RestaurantObject *restaurant;
 @property (nonatomic) PFObject *restaurantPFObject; 
 
+@property (strong, nonatomic) NSMutableArray *menuItemsInRestaurant;
+
+@property (strong, nonatomic) UIActivityIndicatorView *spinner;
+
+- (void) reloadCollectionView;
+
 @end

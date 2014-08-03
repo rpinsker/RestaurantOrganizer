@@ -29,7 +29,10 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir Next Ultra Light" size:20.0]} forState:UIControlStateNormal];
     
-    self.title = self.folderPFObject[@"name"];
+    [self.folderPFObject fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        self.title = self.folderPFObject[@"name"];
+    }];
+
     
     // get restaurants in the folder from parse
     PFRelation *relation = [self.folderPFObject relationForKey:@"ownedRestaurants"];

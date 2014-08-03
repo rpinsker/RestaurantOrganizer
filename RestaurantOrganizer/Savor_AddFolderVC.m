@@ -40,15 +40,14 @@
     folder[@"name"] = name;
     folder[@"owner"] = u;
     
-    [folder saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [folder save];
         
-        PFRelation *userToFolders = [u relationForKey:@"ownedFolders"];
-        [userToFolders addObject:folder];
+    PFRelation *userToFolders = [u relationForKey:@"ownedFolders"];
+    [userToFolders addObject:folder];
         
         [u saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
         }];
-    }];
     
     return YES;
 }
@@ -63,15 +62,15 @@
     PFObject *folder = [PFObject objectWithClassName:@"Folder"];
     folder[@"name"] = name;
     folder[@"owner"] = u;
-    [folder saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    
+    [folder save];
+    
+    PFRelation *userToFolders = [u relationForKey:@"ownedFolders"];
+    [userToFolders addObject:folder];
         
-        PFRelation *userToFolders = [u relationForKey:@"ownedFolders"];
-        [userToFolders addObject:folder];
-        
-        [u saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+    [u saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
         }];
-    }];
     
     /* end parse */
 }

@@ -88,17 +88,44 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         
         self.restaurantPFObject[@"lastVisited"] = [NSDate date];
         
+        NSData *imageData = UIImageJPEGRepresentation(self.dishImage.image, 0.35f);
+        
+        // get image
+        PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
+        [imageFile saveInBackground];
+        
+        
         PFObject *newItemPFObject = [PFObject objectWithClassName:@"MenuItem"];
         newItemPFObject[@"name"] = self.dishNameTextField.text;
         newItemPFObject[@"description"] = self.dishDescriptionTextView.text;
+        if (imageFile)
+            newItemPFObject[@"image"] = imageFile;
         
-        [newItemPFObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            PFRelation *menuItemsRelations = [self.restaurantPFObject relationForKey:@"menuItems"];
-            [menuItemsRelations addObject:newItemPFObject];
-            [self.restaurantPFObject saveInBackground];
-        }];
 
-        menuList.restaurantPFObject = self.restaurantPFObject; 
+        //dispatch_async(dispatch_get_main_queue(), ^{
+            [newItemPFObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                NSLog(@"item saved");
+                PFRelation *menuItemsRelations = [self.restaurantPFObject relationForKey:@"menuItems"];
+                [menuItemsRelations addObject:newItemPFObject];
+                [self.restaurantPFObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    NSLog(@"restaurant relation saved");
+                    menuList.restaurantPFObject = self.restaurantPFObject;
+                    PFRelation *menuItems = [self.restaurantPFObject relationForKey:@"menuItems"];
+                    PFQuery *query = [menuItems query];
+                    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                        NSLog(@"menu list saved");
+                        menuList.menuItemsInRestaurant = [objects mutableCopy];
+                        [menuList.menuItemsInRestaurant sortUsingComparator:^NSComparisonResult(PFObject *menuItem1, PFObject *menuItem2) {
+                            return [menuItem2.createdAt compare:menuItem1.createdAt];
+                        }];
+                        [menuList reloadCollectionView];
+                    }];
+                }];
+            }];
+        //});
+        
+        menuList.restaurantPFObject = self.restaurantPFObject;
     }
+    
 }
 @end
